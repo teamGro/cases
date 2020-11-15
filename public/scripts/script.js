@@ -13,6 +13,6 @@ $(function () {
 })
 
 new Glide('.glide', {
-    bound: true
-    // autoplay: 5000
+    type: 'carousel',
+    autoplay: 3000
 }).mount()

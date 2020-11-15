@@ -77,7 +77,8 @@ gulp.task(
 
 gulp.task("serve", () => {
     browserSync.init({
-        server: "public"
+        server: "public",
+        tunnel: true
     });
 
     gulp.watch("public/**/*.*").on("change", browserSync.reload);
