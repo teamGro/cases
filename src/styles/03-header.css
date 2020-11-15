@@ -1,0 +1,150 @@
+.header {
+    width: 100vw;
+    overflow: hidden;
+
+    background-image: url('../img/header-bg.jpg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__top-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 26px;
+    margin-bottom: 227px;
+
+    color: #fff;
+}
+
+.switch {
+    display: flex;
+}
+
+.switch__btn {
+    padding: 14px 23px;
+
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-image: none;
+    transition: background-image .3s ease-out,
+    border-radius .3s ease-out;
+}
+
+.switch__btn:hover,
+.switch__btn:focus,
+.switch__btn:active {
+    outline: none;
+    border-radius: 50px;
+    background-image: url('../img/switch-bg.png');
+}
+
+.nav__list {
+    display: flex;
+
+    font-family: 'Gotham Pro';
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.nav__item {
+    padding: 14px 23px;
+}
+
+.nav__item > a:hover,
+.nav__item > a:focus,
+.nav__item > a:active {
+  outline:none;
+  text-decoration: underline;
+}
+
+.header__phone {
+    position: relative;
+
+    padding-left: 60px;
+
+    font-family: 'Gotham Pro';
+    font-weight: 700;
+    font-size: 30px;   
+    line-height: 38px;  
+}
+
+.header__phone::before {
+    content: url('../img/phone.png');
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.header__slider-wrap {
+  margin-bottom: 70px;
+}
+
+.slider__desc {
+    max-width: 865px;
+    margin-bottom: 64px;
+
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.slider__bold {
+    display: block;
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 99px;
+}
+
+.slider__link {
+    padding: 25px 71px;
+
+    font-size: 25px;
+    list-style: 27px;
+    font-weight: 700;
+    color: #fff;
+
+    background-color: #DC5474;
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+}
+
+.header__btn-wrap {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 77px;
+}
+
+.header__btn {
+  padding: 35px 40px;
+  border-radius: 50%;  
+  
+  transition: background-color .3s linear, 
+  box-shadow .3s ease-out;
+}
+
+.header__btn_left {
+  margin-right: 14px;
+  transform: rotate(180deg);
+}
+
+.header__btn:hover,
+.header__btn:focus,
+.header__btn:active {
+  outline: none;
+  background: linear-gradient(125.99deg, #DC5474 14.79%, #503EF6 84.91%);
+  box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+

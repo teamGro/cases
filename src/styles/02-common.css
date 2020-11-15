@@ -3,8 +3,8 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src:          url('../public/fonts/rubik-v11-latin_cyrillic-regular.woff2') format('woff2'), 
-         url('../public/fonts/rubik-v11-latin_cyrillic-regular.woff') format('woff');
+    src:          url('../fonts/rubik-v11-latin_cyrillic-regular.woff2') format('woff2'), 
+         url('../fonts/rubik-v11-latin_cyrillic-regular.woff') format('woff');
   }
 
   @font-face {
@@ -12,8 +12,8 @@
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src:          url('../../public/fonts/rubik-v11-latin_cyrillic-500.woff2') format('woff2'),
-         url('../../public/fonts/rubik-v11-latin_cyrillic-500.woff') format('woff');
+    src:          url('../fonts/rubik-v11-latin_cyrillic-500.woff2') format('woff2'),
+         url('../fonts/rubik-v11-latin_cyrillic-500.woff') format('woff');
   }
   
   @font-face {
@@ -21,8 +21,8 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src:          url('../../public/fonts/rubik-v11-latin_cyrillic-700.woff2') format('woff2'),
-         url('../../public/fonts/rubik-v11-latin_cyrillic-700.woff') format('woff');
+    src:          url('../fonts/rubik-v11-latin_cyrillic-700.woff2') format('woff2'),
+         url('../fonts/rubik-v11-latin_cyrillic-700.woff') format('woff');
   }
 
   @font-face {
@@ -30,8 +30,8 @@
     font-style: normal;
     font-weight: 900;
     font-display: swap;
-    src:          url('../../public/fonts/rubik-v11-latin_cyrillic-900.woff2') format('woff2'),
-         url('../../public/fonts/rubik-v11-latin_cyrillic-900.woff') format('woff');
+    src:          url('../fonts/rubik-v11-latin_cyrillic-900.woff2') format('woff2'),
+         url('../fonts/rubik-v11-latin_cyrillic-900.woff') format('woff');
   }
 
   @font-face {
@@ -39,8 +39,8 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src:          url('../../public/fonts/GothamPro-Medium') format('woff2'),
-         url('../../public/fonts/GothamPro-Medium.woff') format('woff');
+    src:          url('../fonts/GothamPro-Medium.woff2') format('woff2'),
+         url('../fonts/GothamPro-Medium.woff') format('woff');
   }
 
 *,
@@ -58,15 +58,14 @@
     background-color: #FFF;
 
     font-family   : "Rubik", Arial, sans-serif;
-    font-size     : 9px;
+    font-size     : var(--main-font-size);
     font-weight   : 400;
-    color         : #8993ad;
-    line-height   : 13px;
+    color         :  var(--main-font-color);
+    line-height   : var(--main-line-height);
     word-wrap     : break-word;
     letter-spacing: 0em;
 
     overflow-x: hidden;
-    z-index   : 5;
   }
 
   img {
@@ -118,7 +117,8 @@
   }
 
   .container {
-    width : 340px;
+    min-width : 1140px;
+    max-width: 1420px;
     margin: 0 auto;
   }
 
