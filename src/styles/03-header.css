@@ -1,6 +1,20 @@
-.header {
+header {
     width: 100vw;
     overflow: hidden;
+
+    outline: 1px solid red;
+}
+
+.header__track {
+  position: relative;
+}
+
+.slider__list {
+  display: flex;
+}
+
+.slider__item{
+  padding-bottom: 220px;
 
     background-image: url('../img/header-bg.jpg');
     background-position: 0 0;
@@ -8,7 +22,11 @@
     background-size: cover;
 }
 
-.header__top-wrap {
+.slider__item_sec {
+  background-image: url('../img/switch-bg.png');
+}
+
+ .header__top-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,11 +103,11 @@
   display: none;
 }
 
-.slider__list {
+.slider__sub-list {
   margin-bottom: 70px;
 }
 
-.slider__item {
+.slider__sub-item {
   position: relative;
 
   display: flex;
@@ -133,20 +151,20 @@
     border-radius: 50px;
 }
 
-.slider__right {
-  position: relative;
-}
-
 .slider__img {
   position: absolute;
-    right: -153px;
-    top: -157px;
+  right: -153px;
+  top: -157px;
 
   display: block;
   /* transform: scale(1.5); */
-}
+ }
 
 .header__btn-wrap {
+  position: absolute;
+  bottom : -70px;
+  right: 180px;
+  
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -174,7 +192,7 @@
   background: linear-gradient(125.99deg, #DC5474 14.79%, #503EF6 84.91%);
   box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.05);
 }
-
+/*
 @media(max-width: 1660px){
   .header {
     background-image: url('../img/header-laptop.jpg');
@@ -235,7 +253,7 @@
     right: 30px;
     transform: scale(1.5);
   }
-}
+} */ 
 
 
 

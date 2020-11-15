@@ -1,1 +1,1 @@
-$(function(){const e=$(".header__btn_right"),n=$(".header__btn_left");e.on("click",()=>{console.log("next")}),n.on("click",()=>{console.log("prev")})}),new Glide(".glide",{perView:1,startAt:0}).mount();
+$(function(){const n=$(".header__btn_right"),e=$(".header__btn_left");n.on("click",()=>{console.log("next")}),e.on("click",()=>{console.log("prev")})}),new Glide(".glide",{bound:!0}).mount();

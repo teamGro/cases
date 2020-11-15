@@ -13,6 +13,6 @@ $(function () {
 })
 
 new Glide('.glide', {
-    perView: 1,
-    startAt: 0
+    bound: true
+    // autoplay: 5000
 }).mount()
