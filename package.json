@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@glidejs/glide": "^3.4.1",
     "browser-sync": "^2.26.13",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -25,5 +26,8 @@
     "gulp-plumber": "^1.2.1",
     "gulp-remember": "^1.0.1",
     "gulp-sourcemaps": "^3.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
   }
 }
