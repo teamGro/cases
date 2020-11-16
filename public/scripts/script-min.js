@@ -1,1 +1,0 @@
-$(function(){const e=$(".header__btn_right"),o=$(".header__btn_left");e.on("click",()=>{console.log("next")}),o.on("click",()=>{console.log("prev")})}),new Glide(".glide",{type:"carousel",autoplay:3e3}).mount();
