@@ -1,0 +1,129 @@
+.cooperation {
+    padding-top        : 128px;
+    padding-bottom     : 243px;
+    background-image   : url('../img/cooperation-bg.jpg');
+    background-repeat  : no-repeat;
+    background-position: right bottom;
+    background-size    : cover;
+}
+
+.cooperation__container {
+    display        : flex;
+    justify-content: flex-end;
+    width          : 100%;
+
+    text-align : center;
+    font-weight: 500;
+    font-size  : 30px;
+    line-height: 110%;
+    color      : #fff;
+}
+
+.cooperation__wrap {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+}
+
+.cooperation__title {
+    margin-bottom: 55px;
+
+    font-weight   : bold;
+    font-size     : 37px;
+    text-align    : center;
+    letter-spacing: -1px;
+    line-height   : 115%;
+}
+
+.cooperation__elem {
+    display: inline-block;
+    padding: 5px 18px;
+
+    background-color: #FFAD3D;
+    border-radius   : 10px;
+}
+
+.cooperation__text {
+    margin-bottom: 33px;
+}
+
+.cooperation__box {
+    display       : flex;
+    flex-direction: column;
+    margin-bottom : 37px;
+}
+
+.cooperation__condition {
+    margin-bottom: 15px;
+}
+
+.coopeartion__hurry {
+    font-weight: bold;
+    font-size  : 50px;
+}
+
+.cooperation__btn {
+    width        : 100%;
+    padding      : 25px 0;
+    box-shadow   : 0px 0px 30px 20px rgba(255, 255, 255, 0.35);
+    border-radius: 50px;
+
+    font-size       : 25px;
+    color           : #fff;
+    background-color: #2C78DA;
+}
+
+@media(min-width: 768px) {
+    .cooperation__title>span {
+        z-index: 5;
+    }
+
+    .cooperation__title .cooperation__elem {
+        transform: rotate(-8deg) translateY(7px);
+        z-index  : 1
+    }
+}
+
+@media(min-width: 992px) {
+    .cooperation {
+        background-image   : url('../img/cooperation-bg-desctop.jpg');
+        background-position: right top;
+    }
+
+    .cooperation__wrap {
+        width          : 940px;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        flex-direction : column;
+    }
+
+    .cooperation__title {
+        font-size: 50px;
+    }
+
+    .cooperation__text {
+        max-width: 700px;
+    }
+
+    .cooperation__box {
+        flex-direction: row;
+        align-items   : center;
+        width         : 100%;
+    }
+
+    .cooperation__condition {
+        max-width: 430px;
+    }
+
+    .cooperation__hurry {
+        flex-grow: 1;
+        font-size: 50px;
+    }
+
+    .cooperation__btn {
+        max-width: 555px;
+    }
+
+
+}

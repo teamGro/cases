@@ -52,8 +52,9 @@
 body {
   position: relative;
 
-  margin : 0;
-  padding: 0;
+  margin   : 0;
+  padding  : 0;
+  min-width: 365px;
 
   background-color: #FFF;
 
@@ -118,7 +119,7 @@ button {
 
 .container {
   /* width: 1420px; */
-  width : 280px;
+  width : 320px;
   margin: 0 auto;
 }
 
