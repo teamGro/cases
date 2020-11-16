@@ -1,0 +1,138 @@
+.goods {
+    background-color: #E5E5E5;
+    padding-top     : 110px;
+    padding-bottom  : 42px;
+}
+
+.goods__title {
+    font-weight: bold;
+    font-size  : 50px;
+    line-height: 110%;
+}
+
+.goods__filters-list {
+    margin-bottom: 42px;
+}
+
+.filters {
+    display  : flex;
+    flex-wrap: wrap;
+}
+
+.filters__item {
+    padding      : 14px;
+    min-width    : 100px;
+    min-height   : 50px;
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    background-color: #C4C4C4;
+    border-radius   : 50px;
+}
+
+.filters__item:not(:last-child) {
+    margin-right: 20px;
+
+}
+
+.filters__item_active {
+    background-color: #DC5474;
+}
+
+.filters__btn {
+    color      : #fff;
+    font-weight: 500;
+    font-size  : 20px;
+    line-height: 110%;
+}
+
+.goods__wrap {
+    position: relative;
+}
+
+.goods__list {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+}
+
+.goods__item {
+    margin-bottom: 20px;
+    padding      : 60px 40px;
+    max-width    : 340px;
+    border-radius: 20px;
+    box-shadow   : 0px 0px 5px rgba(0, 0, 0, 0.25);
+
+    background-color: #fff;
+}
+
+.goods__item_inactive {
+    display: none;
+}
+
+.goods__price {
+    font-weight: 500;
+    font-size  : 25px;
+    line-height: 110%;
+}
+
+.goods__sub-title {
+    font-size  : 20px;
+    line-height: 110%;
+}
+
+.goods__next {
+    display: none;
+}
+
+.goods__all-wrap {
+    display        : flex;
+    justify-content: center;
+}
+
+.goods__all {
+    padding   : 25px;
+    margin-top: 64px;
+
+    font-weight: bold;
+    font-size  : 25px;
+    color      : #fff;
+
+    background-color: #DC5474;
+    border-radius   : 50px;
+}
+
+@media(min-width:768px) {
+    .goods__item:not(:nth-child(2n)) {
+        margin-right: 20px;
+    }
+
+    .goods__item_inactive {
+        display: block;
+    }
+
+    .goods__next {
+        position : absolute;
+        top      : 50%;
+        transform: translateY(-50%);
+        right    : -20px;
+        display  : block;
+    }
+}
+
+@media(min-width:1200px) {
+    .goods__item:not(:nth-child(4n)) {
+        margin-right: 20px;
+    }
+}
+
+@media(min-width:1300px) {
+    .goods__item {
+        max-width: 325px;
+    }
+
+    .goods__item:not(:nth-child(3n)) {
+        margin-right: 20px;
+    }
+}
