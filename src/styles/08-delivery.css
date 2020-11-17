@@ -1,0 +1,146 @@
+.delivery {
+    padding-top: 60px;
+
+    line-height: 110%;
+    color      : #020202;
+    font-size  : 25px;
+}
+
+.delivery__title {
+    margin-bottom: 73px;
+
+    font-weight: bold;
+    font-size  : 50px;
+    line-height: 110%;
+}
+
+.delivery__wrap {
+    display       : flex;
+    flex-direction: column;
+    margin-bottom : 160px;
+}
+
+.delivery__sub-title {
+    margin-bottom: 48px;
+
+    font-weight: 500;
+    font-size  : 30px;
+}
+
+.delivery__list {
+    margin-bottom: 50px;
+}
+
+.delivery__item:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.delivery__text {
+    margin-bottom: 20px;
+    font-weight  : 500;
+}
+
+.delivery__info {
+    display: none;
+}
+
+.delivery__time {
+    padding: 29px 20px;
+
+    border-radius: 20px;
+
+    font-size : 20px;
+    text-align: center;
+    color     : #FFFFFF;
+
+    background: #DC5474;
+}
+
+.delivery__car {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .delivery__item {
+        position: relative;
+
+        padding-left: 100px;
+    }
+
+    .delivery__item::before {
+        content: url('../img/delivery-arrow.svg');
+
+        position: absolute;
+        left    : -5px;
+    }
+}
+
+@media(min-width: 992px) {
+    .delivery__wrap {
+        flex-direction: row;
+    }
+
+    .delivery__info-wrap {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        width          : 40%;
+    }
+
+    .delivery__info {
+        display      : flex;
+        padding      : 108px 30px;
+        margin-bottom: 30px;
+        border-radius: 50%;
+        width        : 300px;
+        height       : 300px;
+
+        text-align: center;
+        color     : #FFFFFF;
+
+        background: linear-gradient(128.26deg, #DC5474 13.94%, #503EF6 85.09%);
+    }
+}
+
+@media(min-width: 1300px) {
+    .delivery {
+        position: relative;
+    }
+
+    .delivery__title {
+        margin-top: 315px;
+    }
+
+    .delivery__vars {
+        margin-right: 20px;
+    }
+
+    .delivery__item {
+        max-width: 360px;
+    }
+
+    .delivery__info-wrap {
+        justify-content: space-between;
+        width          : calc(100% - 360px);
+    }
+
+    .delivery__info {
+        align-self: flex-start;
+        z-index   : -1;
+    }
+
+    .delivery__time {
+        align-self: flex-end;
+        max-width : 740px;
+        z-index   : 5;
+    }
+
+    .delivery__car {
+        position: absolute;
+        top     : 48%;
+        left    : calc(100vw - 65%);
+
+        display: block;
+    }
+}
