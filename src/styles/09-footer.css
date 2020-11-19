@@ -47,7 +47,11 @@
 .footer__list {
     display       : flex;
     flex-direction: column;
+}
 
+.footer__item_desc,
+.footer__item_circle {
+    display: none;
 }
 
 .footer__logo {
@@ -125,6 +129,14 @@
         flex-direction : row;
         justify-content: space-between;
     }
+
+    .footer__logo {
+        margin-bottom: 0;
+    }
+
+    .footer__tel {
+        margin-bottom: 0;
+    }
 }
 
 @media(min-width: 1300px) {
@@ -147,12 +159,19 @@
 @media(min-width: 1650px) {
     .footer__list {
         align-items: center;
+    }
 
+    .footer__item_desc {
+        display: block;
     }
 
     .footer__desc {
         display  : block;
         max-width: 260px;
+    }
+
+    .footer__item_circle {
+        display: block;
     }
 
     .footer__circle {

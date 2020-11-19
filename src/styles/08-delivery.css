@@ -4,6 +4,9 @@
     line-height: 110%;
     color      : #020202;
     font-size  : 25px;
+
+    background-image: url('../img/bg-delivery.png');
+    background-size : cover;
 }
 
 .delivery__title {
@@ -109,7 +112,7 @@
     }
 
     .delivery__title {
-        margin-top: 315px;
+        margin-top: 150px;
     }
 
     .delivery__vars {
