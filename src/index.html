@@ -394,8 +394,16 @@
         </div>
       </div>
 
-      <img class="plotter__img" src="./img/plotter.png" alt="Плоттер">
-      <img src="./img/plotter-phone.png" alt="" class="plotter__phone">
+      <picture>
+        <source type="image/webp" srcset="./img/plotter.webp">
+        <img class="plotter__img" src="./img/plotter.png" alt="Плоттер">
+      </picture>
+
+      <picture>
+        <source type="image/webp" srcset="./img/plotter-phone.webp">
+        <img src="./img/plotter-phone.png" alt="" class="plotter__phone">
+      </picture>
+
     </section>
 
     <section class="delivery">
@@ -439,7 +447,10 @@
         </div>
       </div>
 
-      <img src="./img/delivery-car.png" alt="" class="delivery__car">
+      <picture>
+        <source type="image/webp" srcset="./img/car.webp">
+        <img src="./img/car.png" alt="" class="delivery__car">
+      </picture>
     </section>
   </main>
 
