@@ -2,8 +2,8 @@
     padding-top   : 90px;
     padding-bottom: 63px;
 
-    background-image : url('../img/plotter-bg-mobile.webp');
-    background-image : url('../img/plotter-bg-mobile.jpg');
+    background-image : url('../img/plotter-mobile-bg.webp');
+    background-image : url('../img/plotter-mobile-bg.jpg');
     background-repeat: no-repeat;
     background-size  : cover;
 
@@ -100,10 +100,10 @@
     }
 }
 
-@media(min-width: 1200px){
+@media(min-width: 1200px) {
     .plotter {
-        background-image : url('../img/plotter-bg.webp');
-        background-image : url('../img/plotter-bg.jpg');
+        background-image: url('../img/plotter-bg.webp');
+        background-image: url('../img/plotter-bg.jpg');
     }
 }
 

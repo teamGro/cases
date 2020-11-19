@@ -6,6 +6,11 @@
   <meta name="description"
     content="В нашем online-магазине вы найдете товары по самым лучшим ценам! Приобрести любой товар как оптом, так и в розницу.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="./fonts/rubik-v11-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/rubik-v11-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/rubik-v11-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/rubik-v11-latin_cyrillic-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/GothamPro-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./styles/styles.min.css">
   <script src="./scripts/glide.min.js"></script>
   <script defer src="./scripts/jquery.min.js"></script>
@@ -275,7 +280,10 @@
           <ul class="goods__list">
             <li class="goods__item">
               <div class="goods__img-wrap">
-                <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
+                <picture>
+                  <source type="image/webp" srcset="./img/goods-1.webp">
+                  <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
+                </picture>
               </div>
               <div class="goods__item-wrap">
                 <span class="goods__price">от 100 р.</span>
@@ -284,7 +292,10 @@
             </li>
             <li class="goods__item">
               <div class="goods__img-wrap">
-                <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
+                <picture>
+                  <source type="image/webp" srcset="./img/goods-2.webp">
+                  <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
+                </picture>
               </div>
               <div class="goods__item-wrap">
                 <span class="goods__price">от 80 р.</span>
@@ -293,7 +304,10 @@
             </li>
             <li class="goods__item">
               <div class="goods__img-wrap">
-                <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
+                <picture>
+                  <source type="image/webp" srcset="./img/goods-3.webp">
+                  <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
+                </picture>
               </div>
               <div class="goods__item-wrap">
                 <span class="goods__price">от 30 р.</span>
@@ -302,7 +316,10 @@
             </li>
             <li class="goods__item">
               <div class="goods__img-wrap">
-                <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
+                <picture>
+                  <source type="image/webp" srcset="./img/goods-4.webp">
+                  <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
+                </picture>
               </div>
               <div class="goods__item-wrap">
                 <span class="goods__price">от 20 р.</span>
@@ -311,7 +328,10 @@
             </li>
             <li class="goods__item goods__item_inactive">
               <div class="goods__img-wrap">
-                <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
+                <picture>
+                  <source type="image/webp" srcset="./img/goods-1.webp">
+                  <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
+                </picture>
               </div>
               <div class="goods__item-wrap">
                 <span class="goods__price">от 100 р.</span>
@@ -320,7 +340,10 @@
             </li>
             <li class="goods__item goods__item_inactive">
               <div class="goods__img-wrap">
-                <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
+                <picture>
+                  <source type="image/webp" srcset="./img/goods-2.webp">
+                  <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
+                </picture>
               </div>
               <div class="goods__item-wrap">
                 <span class="goods__price">от 80 р.</span>
@@ -329,7 +352,10 @@
             </li>
             <li class="goods__item goods__item_inactive">
               <div class="goods__img-wrap">
-                <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
+                <picture>
+                  <source type="image/webp" srcset="./img/goods-3.webp">
+                  <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
+                </picture>
               </div>
               <div class="goods__item-wrap">
                 <span class="goods__price">от 30 р.</span>
@@ -338,7 +364,10 @@
             </li>
             <li class="goods__item goods__item_inactive">
               <div class="goods__img-wrap">
-                <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
+                <picture>
+                  <source type="image/webp" srcset="./img/goods-4.webp">
+                  <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
+                </picture>
               </div>
               <div class="goods__item-wrap">
                 <span class="goods__price">от 20 р.</span>
@@ -457,7 +486,9 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__wrap">
-        <img src="./img/footer-img.png" alt="" class="footer__img">
+        <div class="footer__img-wrap">
+          <img src="./img/footer-img.png" alt="" class="footer__img">
+        </div>
 
         <div class="footer__top">
           <h2 class="footer__title">Хочешь получить оптовый прайс на&nbsp;всю продукцию по&nbsp;ослепительным ценам?
@@ -499,8 +530,6 @@
 
         </ul>
       </div>
-
-
     </div>
   </footer>
 

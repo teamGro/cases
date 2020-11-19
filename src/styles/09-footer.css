@@ -6,8 +6,8 @@
     text-align : center;
     color      : #FFFFFF;
 
+    background-image : url('../img/footer-bg-mobile.jpg');
     background-image : url('../img/footer-bg-mobile.webp');
-    background-image : url('../img/footer-bg-mobile.png');
     background-repeat: no-repeat;
     background-size  : cover;
 }
@@ -140,10 +140,10 @@
     }
 }
 
-@media(min-width: 1200px){
+@media(min-width: 1200px) {
     .footer {
-        background-image : url('../img/footer-bg.webp');
-        background-image : url('../img/footer-bg.png');
+        background-image: url('../img/footer-bg.jpg');
+        background-image: url('../img/footer-bg.webp');
     }
 }
 
