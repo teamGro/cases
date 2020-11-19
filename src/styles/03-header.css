@@ -80,14 +80,94 @@
 }
 
 .header__top-wrap {
-  display        : flex;
-  justify-content: flex-end;
-  align-items    : center;
-  margin-top     : 26px;
-  margin-bottom  : 105px;
+  width             : 70vw;
+  display           : flex;
+  justify-content   : flex-end;
+  /* justify-content: center; */
+  /* align-items    : center; */
+  flex-direction    : column;
+  margin-top        : 26px;
+  margin-bottom     : 105px;
 
   color: #fff;
 }
+
+
+/* .switch {
+  display      : flex;
+  margin-bottom: 50px;
+  margin-top   : 50px;
+}
+
+.switch__btn {
+  padding: 14px 23px;
+
+  font-size       : 25px;
+  line-height     : 30px;
+  letter-spacing  : 0.15em;
+  font-weight     : bold;
+  text-transform  : uppercase;
+  color           : #fff;
+  background-image: none;
+  transition      : background-image .3s ease-out,
+    border-radius .3s ease-out;
+}
+
+.switch__btn_active {
+  outline         : none;
+  border-radius   : 50px;
+  background-image: url('../img/logo-bg.png');
+}
+
+.header__nav {
+  display: flex;
+  z-index: 5;
+}
+
+.nav__list {
+  display       : flex;
+  flex-direction: column;
+  margin-bottom : 50px;
+
+  font-family: 'Gotham Pro';
+  font-weight: 700;
+  font-size  : 18px;
+}
+
+.nav__item {
+  padding: 14px 23px;
+}
+
+.nav__item>a:hover,
+.nav__item>a:focus,
+.nav__item>a:active {
+  outline        : none;
+  text-decoration: underline;
+}
+
+.header__phone-wrap {
+  position: relative;
+
+  display: block;
+
+  font-family: 'Gotham Pro';
+  font-weight: 700;
+  font-size  : 30px;
+  line-height: 38px;
+
+  z-index: 5;
+}
+
+.header__phone {
+  display: block;
+}
+
+.header__phone-icon {
+  display: none;
+} */
+
+
+
 
 .header__switch {
   display: none;

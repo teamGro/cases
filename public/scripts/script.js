@@ -78,7 +78,7 @@ $(function () {
 
     new Glide('.glide', {
         type: 'carousel',
-        autoplay: 3000
+        //autoplay: 3000
     }).mount()
 
     let mixer = mixitup('.goods__list');
