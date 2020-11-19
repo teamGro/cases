@@ -26,7 +26,7 @@
 .header__burger {
   position: absolute;
   top     : 5%;
-  right   : 5%;
+  left    : 5%;
 
   display: block;
 }
@@ -36,6 +36,10 @@
   flex-direction: column;
   width         : 24px;
   height        : 19px;
+}
+
+.burger_opened {
+  transform: translateX(70vw);
 }
 
 .burger:focus {

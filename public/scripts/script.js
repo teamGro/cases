@@ -15,7 +15,8 @@ $(function () {
             });
             btnBottomElem.animate()
 
-            $(this)
+            $(this).
+                animate()
                 .removeClass("burger_closed")
                 .addClass("burger_opened");
 
