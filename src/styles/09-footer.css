@@ -6,6 +6,7 @@
     text-align : center;
     color      : #FFFFFF;
 
+    background-image : url('../img/footer-bg-mobile.webp');
     background-image : url('../img/footer-bg-mobile.png');
     background-repeat: no-repeat;
     background-size  : cover;
@@ -124,6 +125,13 @@
     .footer__list {
         flex-direction : row;
         justify-content: space-between;
+    }
+}
+
+@media(min-width: 1200px){
+    .footer {
+        background-image : url('../img/footer-bg.webp');
+        background-image : url('../img/footer-bg.png');
     }
 }
 
