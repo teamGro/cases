@@ -55,6 +55,26 @@
   margin-bottom: 4px;
 }
 
+.burger_opened .burger__elem_top {
+  transform : translateY(5.5px) rotate(45deg);
+  transition: all 0.2s linear;
+}
+
+.burger_closed .burger__elem_top {
+  transform : translateY(0px) rotate(0);
+  transition: all 0.2s linear;
+}
+
+.burger_opened .burger__elem_bottom {
+  transform : translateY(-8.5px) rotate(-45deg);
+  transition: all 0.2s linear;
+}
+
+.burger_closed .burger__elem_bottom {
+  transform : translateY(0) rotate(0);
+  transition: all 0.2s linear;
+}
+
 .header__top-wrap {
   display        : flex;
   justify-content: flex-end;
@@ -272,6 +292,7 @@
 
   .header__nav {
     display: flex;
+    z-index: 5;
   }
 
   .nav__list {
@@ -303,6 +324,8 @@
     font-weight: 700;
     font-size  : 30px;
     line-height: 38px;
+
+    z-index: 5;
   }
 
   .header__phone {
