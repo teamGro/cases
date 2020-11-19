@@ -51,6 +51,11 @@
     line-height: 110%;
 }
 
+.filters__btn:focus,
+.filters__btn:active {
+    outline: none;
+}
+
 .goods__wrap {
     position: relative;
 }

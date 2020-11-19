@@ -78,29 +78,23 @@ $(function () {
         type: 'carousel',
         // autoplay: 3000
     }).mount()
+
+    let mixer = mixitup('.goods__list');
+
+    const filtersBtnsContainer = $('.filters');
+    currentActiveFilter = $('.filters__item_active');
+    filtersBtnsContainer.on('click', (e) => {
+        var target = $(e.target);
+        console.log(target)
+
+        if (target.prop('tagName') == 'BUTTON') {
+            target = target.parent();
+        }
+
+        currentActiveFilter.removeClass('filters__item_active');
+        target.addClass('filters__item_active');
+        currentActiveFilter = target;
+    });
 })
 
 
-function closeMobileMenu(menuBtnObj, headerContainer, headerNav) {
-    if (menuBtnObj.menu.hasClass("mobile-menu_opened")) {
-        menuBtnObj.topElem.animate()
-        menuBtnObj.middleElem.animate({
-            opacity: 1
-        });
-        menuBtnObj.bottomElem.animate()
-
-        headerContainer
-            .removeClass("header__container_moved")
-            .addClass("header__container")
-
-        headerNav
-            .removeClass("navigate_opened")
-            .addClass("navigate_closed")
-
-
-        menuBtnObj.menu
-            .removeClass("mobile-menu_opened")
-            .addClass("mobile-menu_closed");
-        return;
-    }
-}

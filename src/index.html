@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./styles/styles.min.css">
   <script src="./scripts/glide.min.js"></script>
   <script defer src="./scripts/jquery.min.js"></script>
+  <script src="./scripts/mixitup.min.js"></script>
   <script src="./scripts/script.js" defer></script>
   <title>Document</title>
 </head>
@@ -257,28 +258,28 @@
 
         <ul class="goods__filters-list filters">
           <li class="filters__item filters__item_active">
-            <button class="filters__btn ">ВСЕ</button>
+            <button class="filters__btn" data-filter="all">ВСЕ</button>
           </li>
           <li class="filters__item">
-            <button class="filters__btn">Стекла защитные</button>
+            <button class="filters__btn" data-filter=".category-e">Стекла защитные</button>
           </li>
           <li class="filters__item">
-            <button class="filters__btn">Чехлы и накладки</button>
+            <button class="filters__btn" data-filter=".category-c">Чехлы и накладки</button>
           </li>
           <li class="filters__item">
-            <button class="filters__btn">Зарядные устройства</button>
+            <button class="filters__btn" data-filter=".category-d">Зарядные устройства</button>
           </li>
           <li class="filters__item">
-            <button class="filters__btn">Карты памяти</button>
+            <button class="filters__btn" data-filter=".category-e">Карты памяти</button>
           </li>
           <li class="filters__item">
-            <button class="filters__btn">Другие устройства</button>
+            <button class="filters__btn" data-filter=".category-a">Другие устройства</button>
           </li>
         </ul>
 
         <div class="goods__wrap">
           <ul class="goods__list">
-            <li class="goods__item">
+            <li class="goods__item mix category-a" data-order="1">
               <div class="goods__img-wrap">
                 <picture>
                   <source type="image/webp" srcset="./img/goods-1.webp">
@@ -290,7 +291,7 @@
                 <h3 class="goods__sub-title">Игровые джойстики и триггеры</h3>
               </div>
             </li>
-            <li class="goods__item">
+            <li class="goods__item mix category-c" data-order="2">
               <div class="goods__img-wrap">
                 <picture>
                   <source type="image/webp" srcset="./img/goods-2.webp">
@@ -302,7 +303,7 @@
                 <h3 class="goods__sub-title">Чехлы-книжки: Samsung, Xiaomi, Huawei, iPhone</h3>
               </div>
             </li>
-            <li class="goods__item">
+            <li class="goods__item mix category-c" data-order="3">
               <div class="goods__img-wrap">
                 <picture>
                   <source type="image/webp" srcset="./img/goods-3.webp">
@@ -314,7 +315,7 @@
                 <h3 class="goods__sub-title">Чехлы для Apple AirPods (силикон)</h3>
               </div>
             </li>
-            <li class="goods__item">
+            <li class="goods__item mix category-d" data-order="4">
               <div class="goods__img-wrap">
                 <picture>
                   <source type="image/webp" srcset="./img/goods-4.webp">
@@ -326,7 +327,7 @@
                 <h3 class="goods__sub-title">Блоки питания</h3>
               </div>
             </li>
-            <li class="goods__item goods__item_inactive">
+            <li class="goods__item mix category-a" data-order="1">
               <div class="goods__img-wrap">
                 <picture>
                   <source type="image/webp" srcset="./img/goods-1.webp">
@@ -338,7 +339,7 @@
                 <h3 class="goods__sub-title">Блоки питания</h3>
               </div>
             </li>
-            <li class="goods__item goods__item_inactive">
+            <li class="goods__item mix category-c" data-order="2">
               <div class="goods__img-wrap">
                 <picture>
                   <source type="image/webp" srcset="./img/goods-2.webp">
@@ -350,7 +351,7 @@
                 <h3 class="goods__sub-title">Чехлы-книжки: Samsung, Xiaomi, Huawei, iPhone</h3>
               </div>
             </li>
-            <li class="goods__item goods__item_inactive">
+            <li class="goods__item mix category-c" data-order="3">
               <div class="goods__img-wrap">
                 <picture>
                   <source type="image/webp" srcset="./img/goods-3.webp">
@@ -362,7 +363,7 @@
                 <h3 class="goods__sub-title">Чехлы для Apple AirPods (силикон)</h3>
               </div>
             </li>
-            <li class="goods__item goods__item_inactive">
+            <li class="goods__item mix category-d" data-order="4">
               <div class="goods__img-wrap">
                 <picture>
                   <source type="image/webp" srcset="./img/goods-4.webp">
