@@ -60,7 +60,7 @@ gulp.task("copy", () => {
 gulp.task("minifyJS", () => {
     return gulp
         .src(["./src/scripts/script.js"])
-        .pipe(minify())
+        // .pipe(minify())
         .pipe(gulp.dest("./public/scripts"))
 })
 

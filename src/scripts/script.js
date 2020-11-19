@@ -16,7 +16,7 @@ $(function () {
             btnBottomElem.animate()
 
             $(this).
-                animate().
+                animate()
                 .removeClass("burger_closed")
                 .addClass("burger_opened");
 
@@ -31,7 +31,7 @@ $(function () {
             btnBottomElem.animate()
 
             $(this).
-                animate().
+                animate()
                 .removeClass("burger_opened")
                 .addClass("burger_closed");
 
@@ -78,7 +78,7 @@ $(function () {
 
     new Glide('.glide', {
         type: 'carousel',
-        // autoplay: 3000
+        autoplay: 3000
     }).mount()
 
     let mixer = mixitup('.goods__list');
