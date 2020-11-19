@@ -85,7 +85,6 @@ $(function () {
     currentActiveFilter = $('.filters__item_active');
     filtersBtnsContainer.on('click', (e) => {
         var target = $(e.target);
-        console.log(target)
 
         if (target.prop('tagName') == 'BUTTON') {
             target = target.parent();
@@ -95,6 +94,19 @@ $(function () {
         target.addClass('filters__item_active');
         currentActiveFilter = target;
     });
+
+    const navBar = $('.nav');
+    navBar.on("click", (e) => {
+        let target = $(e.target);
+        if (target.prop("tagName") == "A") e.preventDefault();
+        let scrollName = target.attr("data-scroll");
+        let scrollElem = $(`#${scrollName}`);
+        let scrollTop = scrollElem.offset().top;
+
+        $('html, body').animate({
+            scrollTop: scrollTop
+        }, 500);
+    })
 })
 
 
