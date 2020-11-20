@@ -2,11 +2,12 @@
   "name": "cases",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "./node_modules/.bin/gulp dev",
-    "gulp-prod": "cross-env NODE_ENV=production ./node_modules/.bin/gulp"
+    "gulp-prod": "cross-env NODE_ENV=production ./node_modules/.bin/gulp",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +29,8 @@
     "gulp-sourcemaps": "^3.0.0"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "jquery": "^3.5.1",
     "shufflejs": "^5.2.3"
   }
