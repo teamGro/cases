@@ -93,7 +93,7 @@ $(function () {
 
     sliderElem = new Glide('.glide', {
         type: 'carousel',
-        autoplay: 3000
+        //autoplay: 3000
     })
     sliderElem.mount();
 
