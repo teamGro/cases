@@ -1,9 +1,11 @@
 $(function () {
+    let sliderElem;
+
     const btnBurger1 = $('#burger1');
     const btnTopElem = $('#burger1 .burger__elem_top');
     const btnMiddleElem = $('#burger1 .burger__elem_middle');
     const btnBottomElem = $('#burger1 .burger__elem_bottom');
-    const overlay = $('.overlay');
+    const mobileMenu = $('.header__mobile-menu');
 
     btnBurger1.on('click', function () {
         if ($(this).hasClass("burger_closed")) {
@@ -13,7 +15,10 @@ $(function () {
             }, {
                 duration: 100
             });
-            btnBottomElem.animate()
+            btnBottomElem.animate();
+
+            mobileMenu.addClass('header__mobile-menu_open');
+            sliderElem.pause();
 
             $(this).
                 animate()
@@ -28,7 +33,10 @@ $(function () {
             btnMiddleElem.animate({
                 opacity: 1
             });
-            btnBottomElem.animate()
+            btnBottomElem.animate();
+
+            mobileMenu.removeClass('header__mobile-menu_open');
+            sliderElem.play();
 
             $(this).
                 animate()
@@ -43,6 +51,7 @@ $(function () {
     const btnTopElem2 = $('#burger2 .burger__elem_top');
     const btnMiddleElem2 = $('#burger2 .burger__elem_middle');
     const btnBottomElem2 = $('#burger2 .burger__elem_bottom');
+    const mobileMenu2 = $('.header__mobile-menu_sec');
 
     btnBurger2.on('click', function () {
         if ($(this).hasClass("burger_closed")) {
@@ -52,7 +61,10 @@ $(function () {
             }, {
                 duration: 100
             });
-            btnBottomElem2.animate()
+            btnBottomElem2.animate();
+
+            mobileMenu2.addClass('header__mobile-menu_open');
+            sliderElem.pause();
 
             $(this)
                 .removeClass("burger_closed")
@@ -66,7 +78,10 @@ $(function () {
             btnMiddleElem2.animate({
                 opacity: 1
             });
-            btnBottomElem2.animate()
+            btnBottomElem2.animate();
+
+            mobileMenu2.removeClass('header__mobile-menu_open');
+            sliderElem.play();
 
             $(this)
                 .removeClass("burger_opened")
@@ -76,10 +91,11 @@ $(function () {
         }
     })
 
-    new Glide('.glide', {
+    sliderElem = new Glide('.glide', {
         type: 'carousel',
-        //autoplay: 3000
-    }).mount()
+        autoplay: 3000
+    })
+    sliderElem.mount();
 
     let mixer = mixitup('.goods__list');
 

@@ -1,5 +1,6 @@
 .delivery {
     padding-top: 60px;
+    padding-bottom: 160px;
 
     line-height: 110%;
     color      : #020202;
@@ -20,7 +21,6 @@
 .delivery__wrap {
     display       : flex;
     flex-direction: column;
-    margin-bottom : 160px;
 }
 
 .delivery__sub-title {
