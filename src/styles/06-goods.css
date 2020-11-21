@@ -19,8 +19,10 @@
 }
 
 .filters {
-    display  : flex;
-    flex-wrap: wrap;
+    display: flex;
+
+    width     : 100%;
+    overflow-x: auto;
 }
 
 .filters__item {
@@ -37,7 +39,11 @@
 
 .filters__item:not(:last-child) {
     margin-right: 20px;
+}
 
+.filters__item:not(:first-child) {
+    min-width : 230px;
+    align-self: center;
 }
 
 .filters__item_active {
