@@ -25,6 +25,10 @@
     overflow-x: auto;
 }
 
+.filters::-webkit-scrollbar {
+    display: none;
+}
+
 .filters__item {
     padding      : 14px;
     min-width    : 100px;
