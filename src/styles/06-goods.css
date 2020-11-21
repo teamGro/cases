@@ -65,8 +65,13 @@
     outline: none;
 }
 
+.goods__container {
+    position: relative;
+}
+
 .goods__wrap {
     position: relative;
+    overflow: hidden;
 }
 
 .goods__list {
@@ -102,6 +107,11 @@
 
 .goods__item-wrap {
     padding: 25px 40px 60px;
+}
+
+.goods__sub-list {
+    display  : flex;
+    flex-wrap: wrap;
 }
 
 .goods__price {

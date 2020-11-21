@@ -12,10 +12,11 @@
   <link rel="preload" href="./fonts/rubik-v11-latin_cyrillic-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/GothamPro-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./styles/styles.min.css">
+
   <script src="./scripts/glide.min.js"></script>
   <script defer src="./scripts/jquery.min.js"></script>
   <script src="./scripts/mixitup.min.js"></script>
-  <script src="./scripts/script.js" defer></script>
+  <script src="./scripts/script-min.js" defer></script>
   <title>Document</title>
 </head>
 
@@ -282,110 +283,323 @@
           </li>
         </ul>
 
-        <div class="goods__wrap">
-          <ul class="goods__list">
-            <li class="goods__item mix category-a" data-order="1">
-              <div class="goods__img-wrap">
-                <picture>
-                  <source type="image/webp" srcset="./img/goods-1.webp">
-                  <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
-                </picture>
-              </div>
-              <div class="goods__item-wrap">
-                <span class="goods__price">от 100 р.</span>
-                <h3 class="goods__sub-title">Игровые джойстики и триггеры</h3>
-              </div>
-            </li>
-            <li class="goods__item mix category-c" data-order="2">
-              <div class="goods__img-wrap">
-                <picture>
-                  <source type="image/webp" srcset="./img/goods-2.webp">
-                  <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
-                </picture>
-              </div>
-              <div class="goods__item-wrap">
-                <span class="goods__price">от 80 р.</span>
-                <h3 class="goods__sub-title">Чехлы-книжки: Samsung, Xiaomi, Huawei, iPhone</h3>
-              </div>
-            </li>
-            <li class="goods__item mix category-c" data-order="3">
-              <div class="goods__img-wrap">
-                <picture>
-                  <source type="image/webp" srcset="./img/goods-3.webp">
-                  <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
-                </picture>
-              </div>
-              <div class="goods__item-wrap">
-                <span class="goods__price">от 30 р.</span>
-                <h3 class="goods__sub-title">Чехлы для Apple AirPods (силикон)</h3>
-              </div>
-            </li>
-            <li class="goods__item mix category-d" data-order="4">
-              <div class="goods__img-wrap">
-                <picture>
-                  <source type="image/webp" srcset="./img/goods-4.webp">
-                  <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
-                </picture>
-              </div>
-              <div class="goods__item-wrap">
-                <span class="goods__price">от 20 р.</span>
-                <h3 class="goods__sub-title">Блоки питания</h3>
-              </div>
-            </li>
-            <li class="goods__item mix category-a" data-order="1">
-              <div class="goods__img-wrap">
-                <picture>
-                  <source type="image/webp" srcset="./img/goods-1.webp">
-                  <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
-                </picture>
-              </div>
-              <div class="goods__item-wrap">
-                <span class="goods__price">от 100 р.</span>
-                <h3 class="goods__sub-title">Блоки питания</h3>
-              </div>
-            </li>
-            <li class="goods__item mix category-c" data-order="2">
-              <div class="goods__img-wrap">
-                <picture>
-                  <source type="image/webp" srcset="./img/goods-2.webp">
-                  <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
-                </picture>
-              </div>
-              <div class="goods__item-wrap">
-                <span class="goods__price">от 80 р.</span>
-                <h3 class="goods__sub-title">Чехлы-книжки: Samsung, Xiaomi, Huawei, iPhone</h3>
-              </div>
-            </li>
-            <li class="goods__item mix category-c" data-order="3">
-              <div class="goods__img-wrap">
-                <picture>
-                  <source type="image/webp" srcset="./img/goods-3.webp">
-                  <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
-                </picture>
-              </div>
-              <div class="goods__item-wrap">
-                <span class="goods__price">от 30 р.</span>
-                <h3 class="goods__sub-title">Чехлы для Apple AirPods (силикон)</h3>
-              </div>
-            </li>
-            <li class="goods__item mix category-d" data-order="4">
-              <div class="goods__img-wrap">
-                <picture>
-                  <source type="image/webp" srcset="./img/goods-4.webp">
-                  <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
-                </picture>
-              </div>
-              <div class="goods__item-wrap">
-                <span class="goods__price">от 20 р.</span>
-                <h3 class="goods__sub-title">Блоки питания</h3>
-              </div>
-            </li>
-          </ul>
+        <div class="glide2 goods__container">
+          <div class="goods__wrap glide__track" data-glide-el="track">
+            <ul class="goods__list glide__slides">
+              <li class="glide__slide">
+                <ul class="goods__sub-list">
+                  <li class="goods__item mix category-a" data-order="1">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-1.webp">
+                        <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 100 р.</span>
+                      <h3 class="goods__sub-title">Игровые джойстики и триггеры</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="2">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-2.webp">
+                        <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 80 р.</span>
+                      <h3 class="goods__sub-title">Чехлы-книжки: Samsung, Xiaomi, Huawei, iPhone</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="3">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-3.webp">
+                        <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 30 р.</span>
+                      <h3 class="goods__sub-title">Чехлы для Apple AirPods (силикон)</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-d" data-order="4">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-4.webp">
+                        <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 20 р.</span>
+                      <h3 class="goods__sub-title">Блоки питания</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-a" data-order="1">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-1.webp">
+                        <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 100 р.</span>
+                      <h3 class="goods__sub-title">Блоки питания</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="2">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-2.webp">
+                        <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 80 р.</span>
+                      <h3 class="goods__sub-title">Чехлы-книжки: Samsung, Xiaomi, Huawei, iPhone</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="3">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-3.webp">
+                        <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 30 р.</span>
+                      <h3 class="goods__sub-title">Чехлы для Apple AirPods (силикон)</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-d" data-order="4">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-4.webp">
+                        <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 20 р.</span>
+                      <h3 class="goods__sub-title">Блоки питания</h3>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="glide__slide">
+                <ul class="goods__sub-list">
+                  <li class="goods__item mix category-a" data-order="1">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-1.webp">
+                        <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 100 р.</span>
+                      <h3 class="goods__sub-title">Игровые джойстики и триггеры</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="2">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-2.webp">
+                        <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 80 р.</span>
+                      <h3 class="goods__sub-title">Чехлы-книжки: Samsung, Xiaomi, Huawei, iPhone</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="3">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-3.webp">
+                        <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 30 р.</span>
+                      <h3 class="goods__sub-title">Чехлы для Apple AirPods (силикон)</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-d" data-order="4">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-4.webp">
+                        <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 20 р.</span>
+                      <h3 class="goods__sub-title">Блоки питания</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-a" data-order="1">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-1.webp">
+                        <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 100 р.</span>
+                      <h3 class="goods__sub-title">Блоки питания</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="2">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-2.webp">
+                        <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 80 р.</span>
+                      <h3 class="goods__sub-title">Чехлы-книжки: Samsung, Xiaomi, Huawei, iPhone</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="3">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-3.webp">
+                        <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 30 р.</span>
+                      <h3 class="goods__sub-title">Чехлы для Apple AirPods (силикон)</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-d" data-order="4">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-4.webp">
+                        <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 20 р.</span>
+                      <h3 class="goods__sub-title">Блоки питания</h3>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="glide__slide">
+                <ul class="goods__sub-list">
+                  <li class="goods__item mix category-a" data-order="1">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-1.webp">
+                        <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 100 р.</span>
+                      <h3 class="goods__sub-title">Игровые джойстики и триггеры</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="2">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-2.webp">
+                        <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 80 р.</span>
+                      <h3 class="goods__sub-title">Чехлы-книжки: Samsung, Xiaomi, Huawei, iPhone</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="3">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-3.webp">
+                        <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 30 р.</span>
+                      <h3 class="goods__sub-title">Чехлы для Apple AirPods (силикон)</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-d" data-order="4">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-4.webp">
+                        <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 20 р.</span>
+                      <h3 class="goods__sub-title">Блоки питания</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-a" data-order="1">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-1.webp">
+                        <img src="./img/goods-1.png" alt="джойстик" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 100 р.</span>
+                      <h3 class="goods__sub-title">Блоки питания</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="2">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-2.webp">
+                        <img src="./img/goods-2.png" alt="чехлы-книжки" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 80 р.</span>
+                      <h3 class="goods__sub-title">Чехлы-книжки: Samsung, Xiaomi, Huawei, iPhone</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-c" data-order="3">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-3.webp">
+                        <img src="./img/goods-3.png" alt="чехлы для apple airPods" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 30 р.</span>
+                      <h3 class="goods__sub-title">Чехлы для Apple AirPods (силикон)</h3>
+                    </div>
+                  </li>
+                  <li class="goods__item mix category-d" data-order="4">
+                    <div class="goods__img-wrap">
+                      <picture>
+                        <source type="image/webp" srcset="./img/goods-4.webp">
+                        <img src="./img/goods-4.png" alt="блоки питания" class="goods__img">
+                      </picture>
+                    </div>
+                    <div class="goods__item-wrap">
+                      <span class="goods__price">от 20 р.</span>
+                      <h3 class="goods__sub-title">Блоки питания</h3>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
 
-          <button class="goods__next" type="button">
-            <img src="./img/goods-arrow.svg" alt="дальше">
-          </button>
+          <div class="goods__next glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">" type="button">
+              <img src="./img/goods-arrow.svg" alt="дальше">
+            </button>
+          </div>
         </div>
+
+        <script>
+
+        </script>
+
 
         <div class="goods__all-wrap">
           <button class="goods__all" type="button">Посмотреть все товары</button>
