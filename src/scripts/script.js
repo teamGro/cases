@@ -96,21 +96,39 @@ sliderElem = new Glide('.glide', {
 })
 sliderElem.mount();
 
-
-
-let mixer = mixitup('.goods__list');
-
-let goodsSlider = new Glide('.glide2', {
-    type: 'carousel',
-    startAt: 0,
-    perView: 1
+var mySwiper = new Swiper('.swiper-container', {
+    breakpoints: {
+        1200: {
+            slidesPerView: 4
+        },
+        768: {
+            slidesPerView: 3
+        },
+        320: {
+            slidesPerView: 2
+        }
+    },
+    slidesPerColumn: 2,
+    spaceBetween: 30,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    // pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true,
+    // },
+    navigation: {
+        nextEl: '.swiper-button-next',
+    },
 });
-goodsSlider.mount();
+var mySwiper = document.querySelector('.swiper-container').swiper;
 
 const filtersBtnsContainer = $('.filters');
 currentActiveFilter = $('.filters__item_active');
 filtersBtnsContainer.on('click', (e) => {
     var target = $(e.target);
+    //let mixer = mixitup('.goods__list');
+
+    //mySwiper.destroy();
 
     if (target.prop('tagName') == 'BUTTON') {
         target = target.parent();
@@ -120,9 +138,9 @@ filtersBtnsContainer.on('click', (e) => {
     target.addClass('filters__item_active');
     currentActiveFilter = target;
 
-    goodsSlider.update({
-        //perView: 3
-    });
+    if (target.hasClass('filters__item_all')) {
+        mySwiper.init();
+    }
 });
 
 const navBar = $('.nav');
@@ -138,6 +156,9 @@ navBar.on("click", (e) => {
     }, 500);
 
 });
+
+
+
 
 
 
