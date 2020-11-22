@@ -142,11 +142,12 @@
 .popup__wrap_agree {
     position       : relative;
     justify-content: flex-start;
+    align-items    : center;
     margin-bottom  : 36px;
+    height         : 30px;
 }
 
 .popup__agree-label {
-    position   : relative;
     margin-left: 48px;
 
     font-weight: 500;
@@ -158,7 +159,8 @@
 .popup__agree-label::before {
     content : "";
     position: absolute;
-    left    : -48px;
+    left    : 0;
+    top     : 0;
 
     display: inline-block;
     height : 30px;
@@ -171,8 +173,9 @@
 .popup__agree-label::after {
     content : "";
     position: absolute;
-    left    : -43px;
+    left    : 0;
     top     : 6px;
+    left    : 4px;
 
     display      : inline-block;
     height       : 10px;
@@ -262,5 +265,11 @@
 
     .popup__list {
         max-height: 250px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .popup__container {
+        width: 60%;
     }
 }
