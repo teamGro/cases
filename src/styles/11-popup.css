@@ -195,11 +195,11 @@
 }
 
 .popup__list {
-    display       : flex;
-    flex-direction: column;
-    width         : 100%;
-    max-height    : 110px;
-    overflow-y    : auto;
+    display          : flex;
+    flex-direction   : column;
+    width            : 100%;
+    /* max-height    : 110px; */
+    overflow-y       : auto;
 }
 
 .popup__item {

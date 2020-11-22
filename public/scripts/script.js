@@ -195,6 +195,20 @@ closePopupBtn.on('click', () => {
     document.body.style.overflow = "";
 });
 
+//height for list
+const popupForm = $('.popup__form');
+let heightChildrenInPopupForm = 0;
+popupForm.children().each(function () {
+    //if ($(this).hasClass('popupList')) break;
+    heightChildrenInPopupForm += $(this).height();
+})
+const popupListHeight = $('.popup__list').height();
+heightChildrenInPopupForm -= popupListHeight;
+
+const popupContainerHeight = $('.popup__container').height();
+console.log(popupContainerHeight)
+$('.popup__list').height((popupContainerHeight - heightChildrenInPopupForm) / 2);
+console.log(heightChildrenInPopupForm)
 
 
 

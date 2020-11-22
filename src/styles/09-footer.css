@@ -149,6 +149,7 @@
 
     .footer__logo {
         margin-bottom: 0;
+        display      : block;
     }
 
     .footer__tel {
