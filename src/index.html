@@ -848,6 +848,8 @@
 
   <div class="popup">
     <div class="popup__container">
+      <button class="popup__close" type="button">&#10060;</button>
+
       <p class="popup__title">
         Отправьте заявку и наш менеджер свяжется с вами и проконсультирует по всем вопросам приобретения нашей продукции
       </p>
@@ -858,7 +860,7 @@
           <input type="text" class="popup__input" name="user-name" placeholder="Имя">
           <input type="text" class="popup__input" name="user-tel" placeholder="+7(___)_______">
         </div>
-        <textarea class="popup__input popup__input_text" name="user-msg" cols="30" rows="10"
+        <textarea class="popup__input popup__input_text" name="user-msg" cols="30" rows="5"
           placeholder="Напишите комментарий..."></textarea>
 
 
@@ -866,7 +868,9 @@
           <p class="popup__text">
             Код с картинки
           </p>
-          <button class="popup__btn" type="submit">Оправить</button>
+          <div class="popup__btn-wraps">
+            <button class="popup__btn" type="submit">Оправить</button>
+          </div>
         </div>
 
         <p class="popup__code">
@@ -946,7 +950,6 @@
     </div>
 
   </div>
-
 </body>
 
 </html>

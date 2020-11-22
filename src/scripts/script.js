@@ -178,8 +178,25 @@ listWithChk.on('click', (e) => {
     } else {
         chkLabel.removeClass('popup__label_active');
     }
+});
+
+const sliderLink = $('.slider__link');
+sliderLink.on('click', (e) => {
+    e.preventDefault()
+    document.body.style.overflow = "hidden";
+    let topScroll = $(window).scrollTop();
+    popup.addClass('popup_active');
+    popup.css('transform', `translateY(${topScroll}px)`);
 })
 
+const popup = $('.popup');
+const closePopupBtn = $('.popup__close');
+closePopupBtn.on('click', () => {
+    popup.removeClass('popup_active');
+    let topScroll = $(window).scrollTop() + 100;
+    popup.css('transform', `translateY(-${topScroll}vh)`);
+    document.body.style.overflow = "";
+});
 
 
 
