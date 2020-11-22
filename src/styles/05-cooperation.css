@@ -72,6 +72,13 @@
     font-size       : 25px;
     color           : #fff;
     background-color: #2C78DA;
+    transition      : background-color .3s ease-in;
+}
+
+.cooperation__btn:hover,
+.cooperation__btn:focus,
+.cooperation__btn:active {
+    background-color: #DC5474;
 }
 
 @media(min-width: 768px) {
