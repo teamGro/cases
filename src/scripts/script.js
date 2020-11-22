@@ -97,7 +97,8 @@ sliderElem = new Glide('.glide', {
 sliderElem.mount();
 
 let goodsSlider = new Glide('.glide_2', {
-    type: 'carousel'
+    type: 'carousel',
+    perView: 1
 }).mount();
 let isSliderExist = true;
 
