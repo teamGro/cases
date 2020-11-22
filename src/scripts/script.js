@@ -101,11 +101,13 @@ let goodsSlider = new Glide('.glide_2', {
 }).mount();
 let isSliderExist = true;
 
-//let mixer = mixitup('.goods__list');
+let mixer = mixitup('.goods__list-sort');
 const goodsList = $('.goods__list_slides');
+const btnGoddsNext = $('.goods__next');
 const listForSorting = $('.goods__list-sort');
 const filtersBtnsContainer = $('.filters');
 currentActiveFilter = $('.filters__item_active');
+
 filtersBtnsContainer.on('click', (e) => {
     var target = $(e.target);
 
@@ -128,6 +130,7 @@ filtersBtnsContainer.on('click', (e) => {
         goodsList.removeClass('goods__list_inactive');
         listForSorting.addClass('goods__list-sort_inactive');
         isSliderExist = true;
+        btnGoddsNext.css('display', 'block');
         return;
     }
 
@@ -135,18 +138,11 @@ filtersBtnsContainer.on('click', (e) => {
         goodsSlider.destroy();
         goodsSlider = null;
         isSliderExist = false;
+        btnGoddsNext.css('display', 'none');
 
         goodsList.addClass('goods__list_inactive');
         listForSorting.removeClass('goods__list-sort_inactive');
     }
-
-    Array.from(listForSorting.children()).forEach(i => {
-        if (i.getAttribute('data-sort') == targetIDValue) {
-            i.classList.add('goods__item-sort_active');
-        } else {
-            i.classList.remove('goods__item-sort_active');
-        }
-    })
 });
 
 const navBar = $('.nav');

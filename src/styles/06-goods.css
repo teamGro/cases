@@ -173,33 +173,22 @@
 
 /* duplicate for sorting */
 .goods__list-sort {
-    position  : relative;
-    opacity   : 1;
-    z-index   : 5;
-    transition: all .3s ease-in;
+    position: relative;
+    opacity : 1;
+    z-index : 5;
 }
 
 .goods__list-sort_inactive {
-    position  : absolute;
-    top       : 0;
-    left      : 0;
-    opacity   : 0;
-    z-index   : 0;
-    transition: all .3s ease-in;
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    opacity : 0;
+    z-index : 0;
 }
 
 .goods__item-sort {
-    opacity   : 0;
-    position  : absolute;
-    left      : 0;
-    top       : 0;
-    transition: all .3s ease-in;
-}
-
-.goods__item-sort_active {
-    position  : relative;
-    opacity   : 1;
-    transition: all .3s ease-in;
+    margin-left : .5%;
+    margin-right: .5%;
 }
 
 /*  */
