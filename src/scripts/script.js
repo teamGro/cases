@@ -96,39 +96,16 @@ sliderElem = new Glide('.glide', {
 })
 sliderElem.mount();
 
-var mySwiper = new Swiper('.swiper-container', {
-    breakpoints: {
-        1200: {
-            slidesPerView: 4
-        },
-        768: {
-            slidesPerView: 3
-        },
-        320: {
-            slidesPerView: 2
-        }
-    },
-    slidesPerColumn: 2,
-    spaceBetween: 30,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    // pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable: true,
-    // },
-    navigation: {
-        nextEl: '.swiper-button-next',
-    },
-});
-var mySwiper = document.querySelector('.swiper-container').swiper;
+let goodsSlider = new Glide('.glide_2', {
+    type: 'carousel'
+}).mount();
+
+//let mixer = mixitup('.goods__list');
 
 const filtersBtnsContainer = $('.filters');
 currentActiveFilter = $('.filters__item_active');
 filtersBtnsContainer.on('click', (e) => {
     var target = $(e.target);
-    //let mixer = mixitup('.goods__list');
-
-    //mySwiper.destroy();
 
     if (target.prop('tagName') == 'BUTTON') {
         target = target.parent();
@@ -139,7 +116,7 @@ filtersBtnsContainer.on('click', (e) => {
     currentActiveFilter = target;
 
     if (target.hasClass('filters__item_all')) {
-        mySwiper.init();
+        return;
     }
 });
 
@@ -156,6 +133,23 @@ navBar.on("click", (e) => {
     }, 500);
 
 });
+
+// popup
+const listWithChk = $('.popup__list');
+listWithChk.on('click', (e) => {
+    let target = $(e.target);
+    if (target.prop('tagName') != 'LI') {
+        target = target.closest('.popup__item');
+    }
+
+    let chkLabel = target.find('.popup__label');
+    if (!chkLabel.hasClass('popup__label_active')) {
+        console.log(chkLabel)
+        chkLabel.addClass('popup__label_active');
+    } else {
+        chkLabel.removeClass('popup__label_active');
+    }
+})
 
 
 

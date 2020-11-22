@@ -71,6 +71,9 @@
 
 .goods__wrap {
     position: relative;
+}
+
+.goods__box {
     overflow: hidden;
 }
 
@@ -80,11 +83,16 @@
     /* justify-content: center; */
 }
 
+.slider__sub-list {
+    display  : flex;
+    flex-wrap: wrap;
+}
+
 .goods__item {
     display       : flex;
     flex-direction: column;
     margin-bottom : 20px;
-    margin-top    : 0 !important;
+    margin-top    : 0;
     max-width     : 49%;
     border-radius : 20px;
     box-shadow    : 0px 0px 5px rgba(0, 0, 0, 0.25);
