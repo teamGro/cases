@@ -99,9 +99,11 @@ sliderElem.mount();
 let goodsSlider = new Glide('.glide_2', {
     type: 'carousel'
 }).mount();
+let isSliderExist = true;
 
 //let mixer = mixitup('.goods__list');
-
+const goodsList = $('.goods__list_slides');
+const listForSorting = $('.goods__list-sort');
 const filtersBtnsContainer = $('.filters');
 currentActiveFilter = $('.filters__item_active');
 filtersBtnsContainer.on('click', (e) => {
@@ -115,9 +117,36 @@ filtersBtnsContainer.on('click', (e) => {
     target.addClass('filters__item_active');
     currentActiveFilter = target;
 
-    if (target.hasClass('filters__item_all')) {
+    let targetIDValue = target.prop('id');
+
+    if (isSliderExist && targetIDValue == 'goods-all') return;
+
+    if (targetIDValue == 'goods-all' && isSliderExist == false) {
+        goodsSlider = new Glide('.glide_2', {
+            type: 'carousel'
+        }).mount();
+        goodsList.removeClass('goods__list_inactive');
+        listForSorting.addClass('goods__list-sort_inactive');
+        isSliderExist = true;
         return;
     }
+
+    if (isSliderExist) {
+        goodsSlider.destroy();
+        goodsSlider = null;
+        isSliderExist = false;
+
+        goodsList.addClass('goods__list_inactive');
+        listForSorting.removeClass('goods__list-sort_inactive');
+    }
+
+    Array.from(listForSorting.children()).forEach(i => {
+        if (i.getAttribute('data-sort') == targetIDValue) {
+            i.classList.add('goods__item-sort_active');
+        } else {
+            i.classList.remove('goods__item-sort_active');
+        }
+    })
 });
 
 const navBar = $('.nav');
