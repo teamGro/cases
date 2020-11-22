@@ -180,7 +180,8 @@
 }
 
 .header__phone {
-  display: block;
+  display  : block;
+  font-size: 20px;
 }
 
 .header__phone-icon {

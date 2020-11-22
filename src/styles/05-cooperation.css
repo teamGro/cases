@@ -1,6 +1,6 @@
 .cooperation {
-    padding-top        : 128px;
-    padding-bottom     : 243px;
+    padding-top        : 50px;
+    padding-bottom     : 100px;
     background-image   : url('../img/sec-3-bg-small.jpg');
     background-image   : url('../img/sec-3-bg-small.webp');
     background-repeat  : no-repeat;
@@ -94,6 +94,9 @@
 
 @media(min-width: 992px) {
     .cooperation {
+        padding-top   : 110px;
+        padding-bottom: 120px;
+
         background-image   : url('../img/sec-3-bg.jpg');
         background-image   : url('../img/sec-3-bg.webp');
         background-position: right top;

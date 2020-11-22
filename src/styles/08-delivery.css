@@ -1,6 +1,6 @@
 .delivery {
-    padding-top: 60px;
-    padding-bottom: 160px;
+    padding-top   : 60px;
+    padding-bottom: 60px;
 
     line-height: 110%;
     color      : #020202;
@@ -79,6 +79,10 @@
 }
 
 @media(min-width: 992px) {
+    delivery {
+        padding-bottom: 125px;
+    }
+
     .delivery__wrap {
         flex-direction: row;
     }

@@ -27,8 +27,8 @@
 .popup__container {
     position        : relative;
     width           : 90%;
-    height          : auto;
-    padding         : 50px;
+    height          : 90vh;
+    padding         : 30px;
     background-color: #fff;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .popup__input {
-    width        : 45%;
+    width        : 49%;
     border       : 2px solid #DADADA;
     border-radius: 10px;
     padding      : 15px 40px 15px 20px;
@@ -103,7 +103,7 @@
 }
 
 .popup__btn-wrap {
-    width: 40%
+    width: 50%
 }
 
 .popup__btn {
@@ -198,7 +198,7 @@
     display       : flex;
     flex-direction: column;
     width         : 100%;
-    max-height    : 50px;
+    max-height    : 110px;
     overflow-y    : auto;
 }
 
@@ -232,7 +232,7 @@
     content : "";
     position: absolute;
     left    : 25px;
-    top     : 20px;
+    top     : 17px;
 
     display      : inline-block;
     height       : 8px;
@@ -241,6 +241,12 @@
     border-bottom: 2px solid #B1B1B1;
 
     transform: rotate(-45deg);
+}
+
+@media(min-width: 576px) {
+    .popup__label::after {
+        top: 20px;
+    }
 }
 
 @media(min-width: 992px) {
@@ -261,10 +267,6 @@
 
     .popup__input {
         font-size: 18px;
-    }
-
-    .popup__list {
-        max-height: 250px;
     }
 }
 
