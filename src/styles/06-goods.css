@@ -219,6 +219,7 @@
 .goods__all:hover,
 .goods__all:focus,
 .goods__all:active {
+    outline         : none;
     background-color: #2C78DA;
 }
 

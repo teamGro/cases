@@ -49,6 +49,7 @@
 .footer__btn:hover,
 .footer__btn:focus,
 .footer__btn:active {
+    outline         : none;
     background-color: #2C78DA;
 }
 
