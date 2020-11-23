@@ -1,218 +1,241 @@
 let sliderElem;
 
-const btnBurger1 = $('#burger1');
-const btnTopElem = $('#burger1 .burger__elem_top');
-const btnMiddleElem = $('#burger1 .burger__elem_middle');
-const btnBottomElem = $('#burger1 .burger__elem_bottom');
-const mobileMenu = $('.header__mobile-menu');
+const btnBurger1 = $("#burger1");
+const btnTopElem = $("#burger1 .burger__elem_top");
+const btnMiddleElem = $("#burger1 .burger__elem_middle");
+const btnBottomElem = $("#burger1 .burger__elem_bottom");
+const mobileMenu = $(".header__mobile-menu");
 
-btnBurger1.on('click', function () {
-    if ($(this).hasClass("burger_closed")) {
-        btnTopElem.animate()
-        btnMiddleElem.animate({
-            opacity: 0
-        }, {
-            duration: 100
-        });
-        btnBottomElem.animate();
+btnBurger1.on("click", function () {
+  if ($(this).hasClass("burger_closed")) {
+    btnTopElem.animate();
+    btnMiddleElem.animate(
+      {
+        opacity: 0,
+      },
+      {
+        duration: 100,
+      }
+    );
+    btnBottomElem.animate();
 
-        mobileMenu.addClass('header__mobile-menu_open');
-        sliderElem.pause();
+    mobileMenu.addClass("header__mobile-menu_open");
+    sliderElem.pause();
 
-        $(this).
-            animate()
-            .removeClass("burger_closed")
-            .addClass("burger_opened");
+    $(this).animate().removeClass("burger_closed").addClass("burger_opened");
 
-        return;
-    }
+    return;
+  }
 
-    if ($(this).hasClass("burger_opened")) {
-        btnTopElem.animate()
-        btnMiddleElem.animate({
-            opacity: 1
-        });
-        btnBottomElem.animate();
+  if ($(this).hasClass("burger_opened")) {
+    btnTopElem.animate();
+    btnMiddleElem.animate({
+      opacity: 1,
+    });
+    btnBottomElem.animate();
 
-        mobileMenu.removeClass('header__mobile-menu_open');
-        sliderElem.play();
+    mobileMenu.removeClass("header__mobile-menu_open");
+    sliderElem.play();
 
-        $(this).
-            animate()
-            .removeClass("burger_opened")
-            .addClass("burger_closed");
+    $(this).animate().removeClass("burger_opened").addClass("burger_closed");
 
-        return;
-    }
-})
+    return;
+  }
+});
 
-const btnBurger2 = $('#burger2');
-const btnTopElem2 = $('#burger2 .burger__elem_top');
-const btnMiddleElem2 = $('#burger2 .burger__elem_middle');
-const btnBottomElem2 = $('#burger2 .burger__elem_bottom');
-const mobileMenu2 = $('.header__mobile-menu_sec');
+const btnBurger2 = $("#burger2");
+const btnTopElem2 = $("#burger2 .burger__elem_top");
+const btnMiddleElem2 = $("#burger2 .burger__elem_middle");
+const btnBottomElem2 = $("#burger2 .burger__elem_bottom");
+const mobileMenu2 = $(".header__mobile-menu_sec");
 
-btnBurger2.on('click', function () {
-    if ($(this).hasClass("burger_closed")) {
-        btnTopElem2.animate()
-        btnMiddleElem2.animate({
-            opacity: 0
-        }, {
-            duration: 100
-        });
-        btnBottomElem2.animate();
+btnBurger2.on("click", function () {
+  if ($(this).hasClass("burger_closed")) {
+    btnTopElem2.animate();
+    btnMiddleElem2.animate(
+      {
+        opacity: 0,
+      },
+      {
+        duration: 100,
+      }
+    );
+    btnBottomElem2.animate();
 
-        mobileMenu2.addClass('header__mobile-menu_open');
-        sliderElem.pause();
+    mobileMenu2.addClass("header__mobile-menu_open");
+    sliderElem.pause();
 
-        $(this)
-            .removeClass("burger_closed")
-            .addClass("burger_opened");
+    $(this).removeClass("burger_closed").addClass("burger_opened");
 
-        return;
-    }
+    return;
+  }
 
-    if ($(this).hasClass("burger_opened")) {
-        btnTopElem2.animate()
-        btnMiddleElem2.animate({
-            opacity: 1
-        });
-        btnBottomElem2.animate();
+  if ($(this).hasClass("burger_opened")) {
+    btnTopElem2.animate();
+    btnMiddleElem2.animate({
+      opacity: 1,
+    });
+    btnBottomElem2.animate();
 
-        mobileMenu2.removeClass('header__mobile-menu_open');
-        sliderElem.play();
+    mobileMenu2.removeClass("header__mobile-menu_open");
+    sliderElem.play();
 
-        $(this)
-            .removeClass("burger_opened")
-            .addClass("burger_closed");
+    $(this).removeClass("burger_opened").addClass("burger_closed");
 
-        return;
-    }
-})
+    return;
+  }
+});
 
-sliderElem = new Glide('.glide', {
-    type: 'carousel',
-    autoplay: 3000
-})
+sliderElem = new Glide(".glide", {
+  type: "carousel",
+  autoplay: 3000,
+});
 sliderElem.mount();
 
-let goodsSlider = new Glide('.glide_2', {
-    type: 'carousel',
-    perView: 1
+const btnNextSlide = document.querySelector(".header__btn_right");
+btnNextSlide.addEventListener("mousedown", function () {
+  this.classList.add("header__btn_active");
+});
+btnNextSlide.addEventListener("mouseup", function () {
+  this.classList.remove("header__btn_active");
+});
+
+btnNextSlide.addEventListener("touchstart", function () {
+  this.classList.add("header__btn_active");
+});
+btnNextSlide.addEventListener("touchend", function () {
+  this.classList.remove("header__btn_active");
+});
+
+const btnPrevSlide = document.querySelector(".header__btn_right");
+btnPrevSlide.addEventListener("mousedown", function () {
+  this.classList.add("header__btn_active");
+});
+btnPrevSlide.addEventListener("mouseup", function () {
+  this.classList.remove("header__btn_active");
+});
+
+btnPrevSlide.addEventListener("touchstart", function () {
+  this.classList.add("header__btn_active");
+});
+btnPrevSlide.addEventListener("touchend", function () {
+  this.classList.remove("header__btn_active");
+});
+
+let goodsSlider = new Glide(".glide_2", {
+  type: "carousel",
+  perView: 1,
 }).mount();
 let isSliderExist = true;
 
-let mixer = mixitup('.goods__list-sort');
-const goodsList = $('.goods__list_slides');
-const btnGoddsNext = $('.goods__next');
-const listForSorting = $('.goods__list-sort');
-const filtersBtnsContainer = $('.filters');
-currentActiveFilter = $('.filters__item_active');
+let mixer = mixitup(".goods__list-sort");
+const goodsList = $(".goods__list_slides");
+const btnGoddsNext = $(".goods__next");
+const listForSorting = $(".goods__list-sort");
+const filtersBtnsContainer = $(".filters");
+currentActiveFilter = $(".filters__item_active");
 
-filtersBtnsContainer.on('click', (e) => {
-    var target = $(e.target);
+filtersBtnsContainer.on("click", (e) => {
+  var target = $(e.target);
 
-    if (target.prop('tagName') == 'BUTTON') {
-        target = target.parent();
-    }
+  if (target.prop("tagName") == "BUTTON") {
+    target = target.parent();
+  }
 
-    currentActiveFilter.removeClass('filters__item_active');
-    target.addClass('filters__item_active');
-    currentActiveFilter = target;
+  currentActiveFilter.removeClass("filters__item_active");
+  target.addClass("filters__item_active");
+  currentActiveFilter = target;
 
-    let targetIDValue = target.prop('id');
+  let targetIDValue = target.prop("id");
 
-    if (isSliderExist && targetIDValue == 'goods-all') return;
+  if (isSliderExist && targetIDValue == "goods-all") return;
 
-    if (targetIDValue == 'goods-all' && isSliderExist == false) {
-        goodsSlider = new Glide('.glide_2', {
-            type: 'carousel'
-        }).mount();
-        goodsList.removeClass('goods__list_inactive');
-        listForSorting.addClass('goods__list-sort_inactive');
-        isSliderExist = true;
-        btnGoddsNext.css('display', 'block');
-        return;
-    }
+  if (targetIDValue == "goods-all" && isSliderExist == false) {
+    goodsSlider = new Glide(".glide_2", {
+      type: "carousel",
+    }).mount();
+    goodsList.removeClass("goods__list_inactive");
+    listForSorting.addClass("goods__list-sort_inactive");
+    isSliderExist = true;
+    btnGoddsNext.css("display", "block");
+    return;
+  }
 
-    if (isSliderExist) {
-        goodsSlider.destroy();
-        goodsSlider = null;
-        isSliderExist = false;
-        btnGoddsNext.css('display', 'none');
+  if (isSliderExist) {
+    goodsSlider.destroy();
+    goodsSlider = null;
+    isSliderExist = false;
+    btnGoddsNext.css("display", "none");
 
-        goodsList.addClass('goods__list_inactive');
-        listForSorting.removeClass('goods__list-sort_inactive');
-    }
+    goodsList.addClass("goods__list_inactive");
+    listForSorting.removeClass("goods__list-sort_inactive");
+  }
 });
 
-const navBar = $('.nav');
+const navBar = $(".nav");
 navBar.on("click", (e) => {
-    let target = $(e.target);
-    if (target.prop("tagName") == "A") e.preventDefault();
-    let scrollName = target.attr("data-scroll");
-    let scrollElem = $(`#${scrollName}`);
-    let scrollTop = scrollElem.offset().top;
+  let target = $(e.target);
+  if (target.prop("tagName") == "A") e.preventDefault();
+  let scrollName = target.attr("data-scroll");
+  let scrollElem = $(`#${scrollName}`);
+  let scrollTop = scrollElem.offset().top;
 
-    $('html, body').animate({
-        scrollTop: scrollTop
-    }, 500);
-
+  $("html, body").animate(
+    {
+      scrollTop: scrollTop,
+    },
+    500
+  );
 });
 
 // popup
-const listWithChk = $('.popup__list');
-listWithChk.on('click', (e) => {
-    let target = $(e.target);
-    if (target.prop('tagName') != 'LI') {
-        target = target.closest('.popup__item');
-    }
+const listWithChk = $(".popup__list");
+listWithChk.on("click", (e) => {
+  let target = $(e.target);
+  if (target.prop("tagName") != "LI") {
+    target = target.closest(".popup__item");
+  }
 
-    let chkLabel = target.find('.popup__label');
-    if (!chkLabel.hasClass('popup__label_active')) {
-        console.log(chkLabel)
-        chkLabel.addClass('popup__label_active');
-    } else {
-        chkLabel.removeClass('popup__label_active');
-    }
+  let chkLabel = target.find(".popup__label");
+  if (!chkLabel.hasClass("popup__label_active")) {
+    console.log(chkLabel);
+    chkLabel.addClass("popup__label_active");
+  } else {
+    chkLabel.removeClass("popup__label_active");
+  }
 });
 
-const sliderLink = $('.slider__link');
-sliderLink.on('click', (e) => {
-    e.preventDefault()
-    document.body.style.overflow = "hidden";
-    let topScroll = $(window).scrollTop();
-    popup.addClass('popup_active');
-    popup.css('transform', `translateY(${topScroll}px)`);
-})
+const sliderLink = $(".slider__link");
+sliderLink.on("click", (e) => {
+  e.preventDefault();
+  document.body.style.overflow = "hidden";
+  let topScroll = $(window).scrollTop();
+  popup.addClass("popup_active");
+  popup.css("transform", `translateY(${topScroll}px)`);
+});
 
-const popup = $('.popup');
-const closePopupBtn = $('.popup__close');
-closePopupBtn.on('click', () => {
-    popup.removeClass('popup_active');
-    let topScroll = $(window).scrollTop() + 100;
-    popup.css('transform', `translateY(-${topScroll}vh)`);
-    document.body.style.overflow = "";
+const popup = $(".popup");
+const closePopupBtn = $(".popup__close");
+closePopupBtn.on("click", () => {
+  popup.removeClass("popup_active");
+  let topScroll = $(window).scrollTop() + 100;
+  popup.css("transform", `translateY(-${topScroll}vh)`);
+  document.body.style.overflow = "";
 });
 
 //height for list
-const popupForm = $('.popup__form');
+const popupForm = $(".popup__form");
 let heightChildrenInPopupForm = 0;
 popupForm.children().each(function () {
-    //if ($(this).hasClass('popupList')) break;
-    heightChildrenInPopupForm += $(this).height();
-})
-const popupListHeight = $('.popup__list').height();
+  //if ($(this).hasClass('popupList')) break;
+  heightChildrenInPopupForm += $(this).height();
+});
+const popupListHeight = $(".popup__list").height();
 heightChildrenInPopupForm -= popupListHeight;
 
-const popupContainerHeight = $('.popup__container').height();
-console.log(popupContainerHeight)
-$('.popup__list').height((popupContainerHeight - heightChildrenInPopupForm) / 2);
-console.log(heightChildrenInPopupForm)
-
-
-
-
-
-
-
+const popupContainerHeight = $(".popup__container").height();
+console.log(popupContainerHeight);
+$(".popup__list").height(
+  (popupContainerHeight - heightChildrenInPopupForm) / 2
+);
+console.log(heightChildrenInPopupForm);
