@@ -26,20 +26,29 @@
     z-index   : 20;
 }
 
-.popup__container {
-    position          : relative;
-    /*width           : 90%; */
-    height            : auto;
-    padding           : 30px;
-    background-color  : #fff;
+.popup__box {
+    display            : flex;
+    position           : absolute;
+    top                : 0;
+    padding            : 5% 10%;
+    justify-content    : center;
+    /* padding-top     : 250px; */
+    width              : 100%;
+    height             : auto;
+}
 
-    /* transform: translateY(-5000px); */
+.popup__container {
+    position        : relative;
+    width           : 100%;
+    height          : auto;
+    padding         : 30px;
+    background-color: #fff;
 }
 
 .popup__close {
     position : absolute;
-    right    : 5%;
-    top      : 2%;
+    right    : 15px;
+    top      : 7px;
     font-size: 20px;
     color    : #000000;
 }
@@ -70,8 +79,12 @@
     margin-bottom  : 15px;
 }
 
+.popup__wrap_input {
+    flex-direction: column;
+}
+
 .popup__input {
-    width        : 49%;
+    width        : 100%;
     border       : 2px solid #DADADA;
     border-radius: 10px;
     padding      : 15px 40px 15px 20px;
@@ -83,6 +96,10 @@
     line-height: 110%;
 }
 
+.popup__input:first-child {
+    margin-bottom: 15px;
+}
+
 .popup::placeholder {
     font-family: 'Rubik';
     font-style : normal;
@@ -91,7 +108,7 @@
     color      : #B7B7B7;
 }
 
-.popup__input_text {
+.popup__form .popup__input_text {
     width        : auto;
     margin-bottom: 15px;
 }
@@ -204,11 +221,10 @@
 }
 
 .popup__list {
-    display          : flex;
-    flex-direction   : column;
-    width            : 100%;
-    /* max-height    : 110px; */
-    overflow-y       : auto;
+    display       : flex;
+    flex-direction: column;
+    width         : 100%;
+    overflow-y    : auto;
 }
 
 .popup__item {
@@ -286,7 +302,16 @@
         font-size: 21px;
     }
 
+    .popup__wrap_input {
+        flex-direction: row;
+    }
+
+    .popup__input:first-child {
+        margin-bottom: 0;
+    }
+
     .popup__input {
+        width    : 49%;
         font-size: 18px;
     }
 }

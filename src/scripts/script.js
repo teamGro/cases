@@ -195,7 +195,8 @@ navBar.on("click", (e) => {
 
 // popup
 const popup = $(".popup");
-const popupContainer = $('.popup__box');
+const popupBox = $('.popup__box');
+
 
 const listWithChk = $(".popup__list");
 listWithChk.on("click", (e) => {
@@ -219,15 +220,22 @@ popupBtn.on("click", (e) => {
   document.body.style.overflow = "hidden";
   let topScroll = $(window).scrollTop();
   popup.addClass("popup_active");
-  popupContainer.css("transform", `translateY(${topScroll}px)`);
+  popupBox.css("transform", `translateY(${topScroll}px)`);
 });
 
 const closePopupBtn = $(".popup__close");
 closePopupBtn.on("click", () => {
   popup.removeClass("popup_active");
   let topScroll = $(window).scrollTop() + 100;
-  popupContainer.css("transform", `translateY(-${topScroll}vh)`);
-  document.body.style.overflow = "";
+  popupBox.css("transform", `translateY(-${topScroll}vh)`);
+});
+
+popup.on('click', (e) => {
+  if ($(e.target).hasClass('popup__box') || $(e.target).hasClass('popup')) {
+    popup.removeClass("popup_active");
+    let topScroll = $(window).scrollTop() + 100;
+    popupBox.css("transform", `translateY(-${topScroll}vh)`)
+  }
 });
 
 //height for list
