@@ -42,8 +42,8 @@
     font-size  : 20px;
     line-height: 110%;
 
-    background-image: url('../img/about-1.svg');
-    ;
+    background-image   : url('../img/about-1.png');
+    background-image   : url('../img/about-1.webp');
     background-repeat  : no-repeat;
     background-position: center top;
 }
@@ -53,15 +53,18 @@
 }
 
 .about__item:nth-child(2) {
-    background-image: url('../img/about-2.svg');
+    background-image: url('../img/about-2.png');
+    background-image: url('../img/about-2.webp');
 }
 
 .about__item:nth-child(3) {
-    background-image: url('../img/about-3.svg');
+    background-image: url('../img/about-3.png');
+    background-image: url('../img/about-3.webp');
 }
 
 .about__item:last-child {
-    background-image: url('../img/about-4.svg');
+    background-image: url('../img/about-4.png');
+    background-image: url('../img/about-4.webp');
 }
 
 .about__sub-title {

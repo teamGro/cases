@@ -197,23 +197,6 @@ navBar.on("click", (e) => {
 const popup = $(".popup");
 const popupBox = $('.popup__box');
 
-
-const listWithChk = $(".popup__list");
-listWithChk.on("click", (e) => {
-  let target = $(e.target);
-  if (target.prop("tagName") != "LI") {
-    target = target.closest(".popup__item");
-  }
-
-  let chkLabel = target.find(".popup__label");
-  if (!chkLabel.hasClass("popup__label_active")) {
-    console.log(chkLabel);
-    chkLabel.addClass("popup__label_active");
-  } else {
-    chkLabel.removeClass("popup__label_active");
-  }
-});
-
 const popupBtn = $(".cooperation__btn");
 popupBtn.on("click", (e) => {
   e.preventDefault();
@@ -249,8 +232,49 @@ const popupListHeight = $(".popup__list").height();
 heightChildrenInPopupForm -= popupListHeight;
 
 const popupContainerHeight = $(".popup__container").height();
-//console.log(popupContainerHeight);
 $(".popup__list").height(
   (popupContainerHeight - heightChildrenInPopupForm) / 2
 );
-//console.log(heightChildrenInPopupForm);
+
+const chkAgree = $('.popup__wrap_agree');
+const labelAgree = $('.popup__agree-label');
+const listWithChk = $(".popup__list");
+
+chkAgree.on('click', function (e) {
+  let target = $(e.target);
+
+  if (target.prop("tagName") != "DIV") {
+    target = target.closest(".popup__wrap_agree");
+  }
+
+  let chkLabel = target.find(".popup__agree-label");
+  if (!chkLabel.hasClass("popup__agree-label_active")) {
+    chkLabel.addClass("popup__agree-label_active");
+    listWithChk.removeClass('popup__list_inactive');
+  } else {
+    chkLabel.removeClass("popup__agree-label_active");
+    listWithChk.addClass('popup__list_inactive');
+    $('.popup__label_active').each(function (i) {
+      $(this).removeClass('popup__label_active');
+    })
+  }
+});
+
+listWithChk.on("click", function (e) {
+  if ($(this).hasClass('popup__list_inactive')) {
+
+    return;
+  }
+
+  let target = $(e.target);
+  if (target.prop("tagName") != "LI") {
+    target = target.closest(".popup__item");
+  }
+
+  let chkLabel = target.find(".popup__label");
+  if (!chkLabel.hasClass("popup__label_active")) {
+    chkLabel.addClass("popup__label_active");
+  } else {
+    chkLabel.removeClass("popup__label_active");
+  }
+});

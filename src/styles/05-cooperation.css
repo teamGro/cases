@@ -78,6 +78,7 @@
 .cooperation__btn:hover,
 .cooperation__btn:focus,
 .cooperation__btn:active {
+    outline         : none;
     background-color: #DC5474;
 }
 

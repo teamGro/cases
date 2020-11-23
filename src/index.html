@@ -854,15 +854,15 @@
         <form action="" class="popup__form">
 
           <div class="popup__wrap popup__wrap_input">
-            <input type="text" class="popup__input" name="user-name" placeholder="Имя">
-            <input type="text" class="popup__input" name="user-tel" placeholder="+7(___)_______">
+            <input type="text" class="popup__input" name="user-name" placeholder="Имя" required>
+            <input type="text" class="popup__input" name="user-tel" placeholder="+7(___)_______" required>
           </div>
           <textarea class="popup__input popup__input_text" name="user-msg" cols="30" rows="5"
             placeholder="Напишите комментарий..."></textarea>
 
 
           <div class="popup__wrap">
-            <input type="text" class="popup__text" placeholder="Код с картинки">
+            <input type="text" class="popup__text" placeholder="Код с картинки" required>
 
             <div class="popup__btn-wrap">
               <button class="popup__btn" type="submit">Оправить</button>
@@ -876,8 +876,9 @@
             <input class="popup__agree visually-hidden" type="checkbox" id="user-agree" name="user-agree"
               label="user-agree" checked>
 
-            <label class="popup__agree-label" for="user-agree">Я хочу указать в заявке интересующие меня группы
-              товаров</label>
+            <p class="popup__agree-label popup__agree-label_active" for="user-agree">Я хочу указать в заявке
+              интересующие меня группы
+              товаров</p>
           </div>
 
           <ul class="popup__list">
