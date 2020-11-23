@@ -41,6 +41,7 @@
     background-color: #C4C4C4;
     border-radius   : 50px;
     transition      : background-color .3s ease-in;
+    cursor          : pointer;
 }
 
 .filters__item:hover,
@@ -120,6 +121,7 @@
     margin-left   : 1px;
 
     background-color: #fff;
+    transition      : box-shadow .3s ease-in;
 }
 
 .goods__item:hover {
