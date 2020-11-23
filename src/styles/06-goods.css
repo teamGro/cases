@@ -31,10 +31,13 @@
 }
 
 .filters__item {
-    padding      : 14px;
-    min-width    : 100px;
-    min-height   : 50px;
-    margin-bottom: 10px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    padding        : 14px;
+    min-width      : 100px;
+    min-height     : 50px;
+    margin-bottom  : 10px;
 
     text-align: center;
 
