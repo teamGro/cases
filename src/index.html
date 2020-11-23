@@ -262,23 +262,23 @@
         <h2 class="goods__title">Каталог</h2>
 
         <ul class="goods__filters-list filters">
-          <li class="filters__item filters__item_all filters__item_active" id="goods-all">
-            <button class="filters__btn" data-filter="all">ВСЕ</button>
+          <li class="filters__item filters__item_all filters__item_active" id="goods-all" data-filter="all">
+            <button class="filters__btn">ВСЕ</button>
           </li>
-          <li class="filters__item" id="goods-glass">
-            <button class="filters__btn" data-filter=".category-e">Стекла защитные</button>
+          <li class="filters__item" id="goods-glass" data-filter=".category-e">
+            <button class="filters__btn">Стекла защитные</button>
           </li>
-          <li class="filters__item" id="goods-cases">
-            <button class="filters__btn" data-filter=".category-c">Чехлы и накладки</button>
+          <li class="filters__item" id="goods-cases" data-filter=".category-c">
+            <button class="filters__btn">Чехлы и накладки</button>
           </li>
-          <li class="filters__item" id="goods-power">
-            <button class="filters__btn" data-filter=".category-d">Зарядные устройства</button>
+          <li class="filters__item" id="goods-power" data-filter=".category-d">
+            <button class="filters__btn">Зарядные устройства</button>
           </li>
-          <li class="filters__item" id="goods-memory">
-            <button class="filters__btn" data-filter=".category-e">Карты памяти</button>
+          <li class="filters__item" id="goods-memory" data-filter=".category-e">
+            <button class="filters__btn">Карты памяти</button>
           </li>
-          <li class="filters__item" id="goods-other">
-            <button class="filters__btn" data-filter=".category-a">Другие устройства</button>
+          <li class="filters__item" id="goods-other" data-filter=".category-a">
+            <button class="filters__btn">Другие устройства</button>
           </li>
         </ul>
 
@@ -842,105 +842,108 @@
   </footer>
 
   <div class="popup">
-    <div class="popup__container">
-      <button class="popup__close" type="button">&#10060;</button>
+    <div class="popup__box">
+      <div class="popup__container">
+        <button class="popup__close" type="button">&#10060;</button>
 
-      <p class="popup__title">
-        Отправьте заявку и наш менеджер свяжется с вами и проконсультирует по всем вопросам приобретения нашей продукции
-      </p>
-
-      <form action="" class="popup__form">
-
-        <div class="popup__wrap">
-          <input type="text" class="popup__input" name="user-name" placeholder="Имя">
-          <input type="text" class="popup__input" name="user-tel" placeholder="+7(___)_______">
-        </div>
-        <textarea class="popup__input popup__input_text" name="user-msg" cols="30" rows="5"
-          placeholder="Напишите комментарий..."></textarea>
-
-
-        <div class="popup__wrap">
-          <input type="text" class="popup__text" placeholder="Код с картинки">
-
-          <div class="popup__btn-wrap">
-            <button class="popup__btn" type="submit">Оправить</button>
-          </div>
-        </div>
-
-        <p class="popup__code">
+        <p class="popup__title">
+          Отправьте заявку и наш менеджер свяжется с вами и проконсультирует по всем вопросам приобретения нашей
+          продукции
         </p>
 
-        <div class="popup__wrap popup__wrap_agree">
-          <input class="popup__agree visually-hidden" type="checkbox" id="user-agree" name="user-agree"
-            label="user-agree" checked>
+        <form action="" class="popup__form">
 
-          <label class="popup__agree-label" for="user-agree">Я хочу указать в заявке интересующие меня группы
-            товаров</label>
-        </div>
+          <div class="popup__wrap">
+            <input type="text" class="popup__input" name="user-name" placeholder="Имя">
+            <input type="text" class="popup__input" name="user-tel" placeholder="+7(___)_______">
+          </div>
+          <textarea class="popup__input popup__input_text" name="user-msg" cols="30" rows="5"
+            placeholder="Напишите комментарий..."></textarea>
 
-        <ul class="popup__list">
-          <li class="popup__item">
-            <input type="checlbox" id="chb-1" class="popup__choice visually-hidden">
-            <img src="./img/popup-img.png" alt="" class="popup__img">
-            <p class="popup__label">Игровые джойстики и триггеры</p>
-            <p class="popup__price">от 100 руб</p>
-          </li>
-          <li class="popup__item">
-            <input type="checlbox" id="chb-2" class="popup__choice visually-hidden">
-            <img src="./img/popup-img.png" alt="" class="popup__img">
-            <p class="popup__label">Игровые джойстики и триггеры</p>
-            <p class="popup__price">от 100 руб</p>
-          </li>
-          <li class="popup__item">
-            <input type="checlbox" id="chb-3" class="popup__choice visually-hidden">
-            <img src="./img/popup-img.png" alt="" class="popup__img">
-            <p class="popup__label">Игровые джойстики и триггеры</p>
-            <p class="popup__price">от 100 руб</p>
-          </li>
-          <li class="popup__item">
-            <input type="checlbox" id="chb-4" class="popup__choice visually-hidden">
-            <img src="./img/popup-img.png" alt="" class="popup__img">
-            <p class="popup__label">Игровые джойстики и триггеры</p>
-            <p class="popup__price">от 100 руб</p>
-          </li>
-          <li class="popup__item">
-            <input type="checlbox" id="chb-5" class="popup__choice visually-hidden">
-            <img src="./img/popup-img.png" alt="" class="popup__img">
-            <p class="popup__label">Игровые джойстики и триггеры</p>
-            <p class="popup__price">от 100 руб</p>
-          </li>
-          <li class="popup__item">
-            <input type="checlbox" id="chb-6" class="popup__choice visually-hidden">
-            <img src="./img/popup-img.png" alt="" class="popup__img">
-            <p p class="popup__label">Игровые джойстики и триггеры</p>
-            <p class="popup__price">от 100 руб</p>
-          </li>
-          <li class="popup__item">
-            <input type="checlbox" id="chb-7" class="popup__choice visually-hidden">
-            <img src="./img/popup-img.png" alt="" class="popup__img">
-            <p p class="popup__label">Игровые джойстики и триггеры</p>
-            <p class="popup__price">от 100 руб</p>
-          </li>
-          <li class="popup__item">
-            <input type="checlbox" id="chb-8" class="popup__choice visually-hidden">
-            <img src="./img/popup-img.png" alt="" class="popup__img">
-            <p p class="popup__label">Игровые джойстики и триггеры</p>
-            <p class="popup__price">от 100 руб</p>
-          </li>
-          <li class="popup__item">
-            <input type="checlbox" id="chb-9" class="popup__choice visually-hidden">
-            <img src="./img/popup-img.png" alt="" class="popup__img">
-            <p class="popup__label">Игровые джойстики и триггеры</p>
-            <p class="popup__price">от 100 руб</p>
-          </li>
-          <li class="popup__item">
-            <input type="checlbox" id="chb-10" class="popup__choice visually-hidden">
-            <img src="./img/popup-img.png" alt="" class="popup__img">
-            <p class="popup__label">Игровые джойстики и триггеры</p>
-            <p class="popup__price">от 100 руб</p>
-          </li>
-        </ul>
-      </form>
+
+          <div class="popup__wrap">
+            <input type="text" class="popup__text" placeholder="Код с картинки">
+
+            <div class="popup__btn-wrap">
+              <button class="popup__btn" type="submit">Оправить</button>
+            </div>
+          </div>
+
+          <p class="popup__code">
+          </p>
+
+          <div class="popup__wrap popup__wrap_agree">
+            <input class="popup__agree visually-hidden" type="checkbox" id="user-agree" name="user-agree"
+              label="user-agree" checked>
+
+            <label class="popup__agree-label" for="user-agree">Я хочу указать в заявке интересующие меня группы
+              товаров</label>
+          </div>
+
+          <ul class="popup__list">
+            <li class="popup__item">
+              <input type="checlbox" id="chb-1" class="popup__choice visually-hidden">
+              <img src="./img/popup-img.png" alt="" class="popup__img">
+              <p class="popup__label">Игровые джойстики и триггеры</p>
+              <p class="popup__price">от 100 руб</p>
+            </li>
+            <li class="popup__item">
+              <input type="checlbox" id="chb-2" class="popup__choice visually-hidden">
+              <img src="./img/popup-img.png" alt="" class="popup__img">
+              <p class="popup__label">Игровые джойстики и триггеры</p>
+              <p class="popup__price">от 100 руб</p>
+            </li>
+            <li class="popup__item">
+              <input type="checlbox" id="chb-3" class="popup__choice visually-hidden">
+              <img src="./img/popup-img.png" alt="" class="popup__img">
+              <p class="popup__label">Игровые джойстики и триггеры</p>
+              <p class="popup__price">от 100 руб</p>
+            </li>
+            <li class="popup__item">
+              <input type="checlbox" id="chb-4" class="popup__choice visually-hidden">
+              <img src="./img/popup-img.png" alt="" class="popup__img">
+              <p class="popup__label">Игровые джойстики и триггеры</p>
+              <p class="popup__price">от 100 руб</p>
+            </li>
+            <li class="popup__item">
+              <input type="checlbox" id="chb-5" class="popup__choice visually-hidden">
+              <img src="./img/popup-img.png" alt="" class="popup__img">
+              <p class="popup__label">Игровые джойстики и триггеры</p>
+              <p class="popup__price">от 100 руб</p>
+            </li>
+            <li class="popup__item">
+              <input type="checlbox" id="chb-6" class="popup__choice visually-hidden">
+              <img src="./img/popup-img.png" alt="" class="popup__img">
+              <p p class="popup__label">Игровые джойстики и триггеры</p>
+              <p class="popup__price">от 100 руб</p>
+            </li>
+            <li class="popup__item">
+              <input type="checlbox" id="chb-7" class="popup__choice visually-hidden">
+              <img src="./img/popup-img.png" alt="" class="popup__img">
+              <p p class="popup__label">Игровые джойстики и триггеры</p>
+              <p class="popup__price">от 100 руб</p>
+            </li>
+            <li class="popup__item">
+              <input type="checlbox" id="chb-8" class="popup__choice visually-hidden">
+              <img src="./img/popup-img.png" alt="" class="popup__img">
+              <p p class="popup__label">Игровые джойстики и триггеры</p>
+              <p class="popup__price">от 100 руб</p>
+            </li>
+            <li class="popup__item">
+              <input type="checlbox" id="chb-9" class="popup__choice visually-hidden">
+              <img src="./img/popup-img.png" alt="" class="popup__img">
+              <p class="popup__label">Игровые джойстики и триггеры</p>
+              <p class="popup__price">от 100 руб</p>
+            </li>
+            <li class="popup__item">
+              <input type="checlbox" id="chb-10" class="popup__choice visually-hidden">
+              <img src="./img/popup-img.png" alt="" class="popup__img">
+              <p class="popup__label">Игровые джойстики и триггеры</p>
+              <p class="popup__price">от 100 руб</p>
+            </li>
+          </ul>
+        </form>
+      </div>
     </div>
 
   </div>

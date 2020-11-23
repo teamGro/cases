@@ -1,5 +1,7 @@
 :root {
-    --main-font-size: 20px;
-    --main-line-height: 22px;
-    --main-font-color: #000;
+    --main-font-size    : 20px;
+    --main-line-height  : 22px;
+    --main-font-color   : #000;
+    --padding-mobile-btn: 15px 30px;
+    --padding-laptop-btn: 25px 30px;
 }

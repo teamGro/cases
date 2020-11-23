@@ -28,7 +28,7 @@
 }
 
 .footer__btn {
-    padding      : 25px 0;
+    padding      : var(--padding-mobile-btn);
     width        : 100%;
     margin-bottom: 100px;
 
@@ -154,6 +154,10 @@
 
     .footer__tel {
         margin-bottom: 0;
+    }
+
+    .footer__btn {
+        padding: var(--padding-laptop-btn);
     }
 }
 

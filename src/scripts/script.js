@@ -137,6 +137,11 @@ currentActiveFilter = $(".filters__item_active");
 
 filtersBtnsContainer.on("click", (e) => {
   var target = $(e.target);
+  console.log(target);
+  if (target.prop('tagName') == 'UL') {
+    console.log(target.prop('tagName'));
+    return;
+  }
 
   if (target.prop("tagName") == "BUTTON") {
     target = target.parent();
@@ -189,6 +194,9 @@ navBar.on("click", (e) => {
 });
 
 // popup
+const popup = $(".popup");
+const popupContainer = $('.popup__box');
+
 const listWithChk = $(".popup__list");
 listWithChk.on("click", (e) => {
   let target = $(e.target);
@@ -205,21 +213,20 @@ listWithChk.on("click", (e) => {
   }
 });
 
-const sliderLink = $(".slider__link");
-sliderLink.on("click", (e) => {
+const popupBtn = $(".cooperation__btn");
+popupBtn.on("click", (e) => {
   e.preventDefault();
   document.body.style.overflow = "hidden";
   let topScroll = $(window).scrollTop();
   popup.addClass("popup_active");
-  popup.css("transform", `translateY(${topScroll}px)`);
+  popupContainer.css("transform", `translateY(${topScroll}px)`);
 });
 
-const popup = $(".popup");
 const closePopupBtn = $(".popup__close");
 closePopupBtn.on("click", () => {
   popup.removeClass("popup_active");
   let topScroll = $(window).scrollTop() + 100;
-  popup.css("transform", `translateY(-${topScroll}vh)`);
+  popupContainer.css("transform", `translateY(-${topScroll}vh)`);
   document.body.style.overflow = "";
 });
 
@@ -234,8 +241,8 @@ const popupListHeight = $(".popup__list").height();
 heightChildrenInPopupForm -= popupListHeight;
 
 const popupContainerHeight = $(".popup__container").height();
-console.log(popupContainerHeight);
+//console.log(popupContainerHeight);
 $(".popup__list").height(
   (popupContainerHeight - heightChildrenInPopupForm) / 2
 );
-console.log(heightChildrenInPopupForm);
+//console.log(heightChildrenInPopupForm);

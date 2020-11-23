@@ -3,7 +3,7 @@
     top     : 0;
     left    : 0;
 
-    height         : 100vh;
+    height         : 0;
     width          : 100vw;
     margin         : 0 auto;
     display        : flex;
@@ -14,30 +14,39 @@
     font-size       : 15px;
     background-color: rgba(0, 0, 0, 0.5);
 
-    transform : translateY(-100vh);
+    /* transform : translateY(-100vh); */
     opacity   : 0;
-    transition: transform .3s ease-in, opacity .3s ease-in;
+    transition: transform .3s ease-in, opacity .3s ease-in, height .3s ease-in;
 }
 
 .popup_active {
+    height    : 100%;
     opacity   : 1;
     transition: transform .3s ease-in, opacity .3s ease-in;
+    z-index   : 20;
 }
 
 .popup__container {
-    position        : relative;
-    width           : 90%;
-    height          : 90vh;
-    padding         : 30px;
-    background-color: #fff;
+    position          : relative;
+    /*width           : 90%; */
+    height            : auto;
+    padding           : 30px;
+    background-color  : #fff;
+
+    /* transform: translateY(-5000px); */
 }
 
 .popup__close {
     position : absolute;
     right    : 5%;
     top      : 2%;
-    font-size: 16px;
+    font-size: 20px;
     color    : #000000;
+}
+
+.popup__close:focus,
+.popup__close:active {
+    outline: none;
 }
 
 .popup__title {
@@ -245,19 +254,31 @@
 
 @media(min-width: 576px) {
     .popup__label::after {
-        top: 20px;
+        top: 21px;
     }
 }
 
-@media(min-width: 992px) {
+@media(min-width: 1024px) {
     .popup {
         font-size          : 18px;
-        background-image   : url('../img/popup-bg.png');
         background-repeat  : no-repeat;
         background-position: center top;
     }
 
+    .popup__box {
+        display         : flex;
+        justify-content : center;
+        padding-top     : 250px;
+        width           : 1000px;
+        height          : 1500px;
+        position        : absolute;
+        top             : 0;
+        background-image: url('../img/popup-bg.png');
+    }
+
     .popup__container {
+        width  : 700px;
+        height : 954px;
         padding: 50px 100px;
     }
 
@@ -267,11 +288,5 @@
 
     .popup__input {
         font-size: 18px;
-    }
-}
-
-@media(min-width: 1200px) {
-    .popup__container {
-        width: 60%;
     }
 }
