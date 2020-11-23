@@ -20,59 +20,58 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
+    <button class="header__burger burger burger_closed" id="burger1">
+      <span class="burger__elem burger__elem_top"></span>
+      <span class="burger__elem burger__elem_middle"></span>
+      <span class="burger__elem burger__elem_bottom"></span>
+    </button>
+
+    <div class="header__top-wrap">
+      <div class="header__mobile-menu">
+        <ul class="header__switch switch">
+          <li class="switch__item">
+            <button class="switch__btn switch__btn_active">Все</button>
+          </li>
+          <li class="switch__item">
+            <button class="switch__btn">Чехлы</button>
+          </li>
+        </ul>
+
+        <navigation class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" data-scroll="about">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" data-scroll="catalog">Каталог</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" data-scroll="delivery">Доставка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" data-scroll="price">Прайс</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" data-scroll="contacts">Контакты</a>
+            </li>
+          </ul>
+        </navigation>
+
+        <div class="header__phone-wrap">
+          <a href="tel:+79061713466" class="header__phone-icon">
+            <img src="./img/phone.png" alt="Позвонить">
+          </a>
+          <a href="tel:+79061713466" class="header__phone">8 (906) 171 34 66</a>
+        </div>
+      </div>
+    </div>
+
     <div class="glide">
       <div class="glide__track header__track" data-glide-el="track">
         <ul class="glide__slides slider__list">
           <li class="glide__slide slider__item">
-            <button class="header__burger burger burger_closed" id="burger1">
-              <span class="burger__elem burger__elem_top"></span>
-              <span class="burger__elem burger__elem_middle"></span>
-              <span class="burger__elem burger__elem_bottom"></span>
-            </button>
-
             <div class="container">
-              <div class="header__top-wrap">
-                <div class="header__mobile-menu">
-                  <ul class="header__switch switch">
-                    <li class="switch__item">
-                      <button class="switch__btn switch__btn_active">Все</button>
-                    </li>
-                    <li class="switch__item">
-                      <button class="switch__btn">Чехлы</button>
-                    </li>
-                  </ul>
-
-                  <navigation class="header__nav nav">
-                    <ul class="nav__list">
-                      <li class="nav__item">
-                        <a href="#" data-scroll="about">О нас</a>
-                      </li>
-                      <li class="nav__item">
-                        <a href="#" data-scroll="catalog">Каталог</a>
-                      </li>
-                      <li class="nav__item">
-                        <a href="#" data-scroll="delivery">Доставка</a>
-                      </li>
-                      <li class="nav__item">
-                        <a href="#" data-scroll="price">Прайс</a>
-                      </li>
-                      <li class="nav__item">
-                        <a href="#" data-scroll="contacts">Контакты</a>
-                      </li>
-                    </ul>
-                  </navigation>
-
-                  <div class="header__phone-wrap">
-                    <a href="tel:+79061713466" class="header__phone-icon">
-                      <img src="./img/phone.png" alt="Позвонить">
-                    </a>
-                    <a href="tel:+79061713466" class="header__phone">8 (906) 171 34 66</a>
-                  </div>
-                </div>
-
-              </div>
-
               <div class="slider__sub-item">
                 <p class="slider__desc">
                   <span class="slider__bold">ЗАРАБАТЫВАЙ ВМЕСТЕ С НАМИ</span>
@@ -89,7 +88,6 @@
                   <img class="slider__img" src="./img/header-img-desctop.png" alt="Получай проценты с продажи товаров">
                 </picture>
               </div>
-
             </div>
           </li>
           <li class="glide__slide slider__item slider__item_sec header">
@@ -100,46 +98,6 @@
             </button>
 
             <div class="container">
-              <div class="header__top-wrap">
-                <div class="header__mobile-menu header__mobile-menu_sec">
-                  <ul class="header__switch switch">
-                    <li class="switch__item">
-                      <button class="switch__btn switch__btn_active">Все</button>
-                    </li>
-                    <li class="switch__item">
-                      <button class="switch__btn">Чехлы</button>
-                    </li>
-                  </ul>
-
-                  <navigation class="header__nav nav">
-                    <ul class="nav__list">
-                      <li class="nav__item">
-                        <a href="#" data-scroll="about">О нас</a>
-                      </li>
-                      <li class="nav__item">
-                        <a href="#" data-scroll="catalog">Каталог</a>
-                      </li>
-                      <li class="nav__item">
-                        <a href="#" data-scroll="delivery">Доставка</a>
-                      </li>
-                      <li class="nav__item">
-                        <a href="#" data-scroll="price">Прайс</a>
-                      </li>
-                      <li class="nav__item">
-                        <a href="#" data-scroll="contacts">Контакты</a>
-                      </li>
-                    </ul>
-                  </navigation>
-
-                  <div class="header__phone-wrap">
-                    <a href="tel:+79061713466" class="header__phone-icon">
-                      <img src="./img/phone.png" alt="Позвонить">
-                    </a>
-                    <a href="tel:+79061713466" class="header__phone">8 (906) 171 34 66</a>
-                  </div>
-                </div>
-              </div>
-
               <div class="slider__sub-item">
                 <h2 class="visually-hidden">Беспроводные наушники AirPods PRO</h2>
                 <div class="slider__content">
@@ -153,8 +111,6 @@
                     <a href="#" class="slider__link slider__link_sec">Хочу купить!</a>
                   </div>
                 </div>
-
-
               </div>
             </div>
             <picture>

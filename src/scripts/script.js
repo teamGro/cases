@@ -43,49 +43,6 @@ btnBurger1.on("click", function () {
   }
 });
 
-const btnBurger2 = $("#burger2");
-const btnTopElem2 = $("#burger2 .burger__elem_top");
-const btnMiddleElem2 = $("#burger2 .burger__elem_middle");
-const btnBottomElem2 = $("#burger2 .burger__elem_bottom");
-const mobileMenu2 = $(".header__mobile-menu_sec");
-
-btnBurger2.on("click", function () {
-  if ($(this).hasClass("burger_closed")) {
-    btnTopElem2.animate();
-    btnMiddleElem2.animate(
-      {
-        opacity: 0,
-      },
-      {
-        duration: 100,
-      }
-    );
-    btnBottomElem2.animate();
-
-    mobileMenu2.addClass("header__mobile-menu_open");
-    sliderElem.pause();
-
-    $(this).removeClass("burger_closed").addClass("burger_opened");
-
-    return;
-  }
-
-  if ($(this).hasClass("burger_opened")) {
-    btnTopElem2.animate();
-    btnMiddleElem2.animate({
-      opacity: 1,
-    });
-    btnBottomElem2.animate();
-
-    mobileMenu2.removeClass("header__mobile-menu_open");
-    sliderElem.play();
-
-    $(this).removeClass("burger_opened").addClass("burger_closed");
-
-    return;
-  }
-});
-
 sliderElem = new Glide(".glide", {
   type: "carousel",
   autoplay: 3000,
@@ -198,9 +155,8 @@ const popup = $(".popup");
 const popupBox = $('.popup__box');
 
 const popupBtn = $(".cooperation__btn");
-popupBtn.on("click", (e) => {
+$(".cooperation__btn").on("click", (e) => {
   e.preventDefault();
-  document.body.style.overflow = "hidden";
   let topScroll = $(window).scrollTop();
   popup.addClass("popup_active");
   popupBox.css("transform", `translateY(${topScroll}px)`);
