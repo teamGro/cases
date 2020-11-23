@@ -272,7 +272,7 @@
     content : "";
     position: absolute;
     left    : 25px;
-    top     : 17px;
+    top     : 40%;
 
     display      : inline-block;
     height       : 8px;
@@ -285,12 +285,6 @@
 
 .popup__price {
     margin-right: 5px;
-}
-
-@media(min-width: 576px) {
-    .popup__label::after {
-        top: 21px;
-    }
 }
 
 @media(min-width: 1024px) {
