@@ -37,8 +37,10 @@ gulp.task("getAllCSS", () => {
             .pipe(autoprefixer({
                 cascade: false
             }))
+            .pipe(gulp.dest("public/styles"))
             .pipe(cssmin())
             .pipe(rename("styles.min.css"))
+            .pipe(gulp.dest("public/styles"))
             .pipe(gulp.dest("public/styles"))
     );
 });
