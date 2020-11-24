@@ -250,7 +250,7 @@
 
   display        : none;
   justify-content: flex-end;
-  width          : 100%;
+  width          : auto;
 }
 
 .header__btn {

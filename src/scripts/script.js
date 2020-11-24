@@ -171,11 +171,19 @@ closePopupBtn.on("click", () => {
 
 popup.on('click', (e) => {
   if ($(e.target).hasClass('popup__box') || $(e.target).hasClass('popup')) {
-    popup.removeClass('popup_close').addClass("popup_active");
+    popup.removeClass('popup_active').addClass("popup_close");
     let topScroll = $(window).scrollTop() + 100;
     popupBox.css("transform", `translateY(-${topScroll}vh)`)
   }
 });
+
+$('.slider__link').on('click', (e) => {
+  e.preventDefault();
+  console.log(1)
+  let topScroll = $(window).scrollTop();
+  popup.removeClass('popup_close').addClass("popup_active");
+  popupBox.css("transform", `translateY(${topScroll}px)`);
+})
 
 //height for list
 const popupForm = $(".popup__form");
