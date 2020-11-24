@@ -42,6 +42,7 @@
     position        : relative;
     width           : 100%;
     height          : auto;
+    border-radius   : 10px;
     padding         : 30px;
     background-color: #fff;
 }
@@ -81,7 +82,6 @@
 .popup__close-elem_left {
     transform: rotate(-45deg);
 }
-
 
 
 .popup__title {
@@ -126,12 +126,19 @@
     margin-bottom: 15px;
 }
 
+.popup__input:focus {
+    outline: none;
+
+    border-radius: 10px;
+}
+
 .popup::placeholder {
     font-family: 'Rubik';
     font-style : normal;
     font-size  : 15px;
     line-height: 110%;
     color      : #B7B7B7;
+
 }
 
 .popup__form .popup__input_text {
@@ -258,7 +265,7 @@
 }
 
 .popup__list_inactive {
-    filter: blur(1px);
+    filter: blur(2px);
 }
 
 .popup__item {

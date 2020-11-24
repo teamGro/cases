@@ -134,6 +134,8 @@ filtersBtnsContainer.on("click", (e) => {
   }
 });
 
+
+
 const navBar = $(".nav");
 navBar.on("click", (e) => {
   let target = $(e.target);
@@ -234,3 +236,22 @@ listWithChk.on("click", function (e) {
     chkLabel.removeClass("popup__label_active");
   }
 });
+
+
+goodsList.on('click', (e) => {
+  let target = $(e.target);
+  if (target.prop('tagName') == "UL") return;
+  let topScroll = $(window).scrollTop();
+  popup.addClass("popup_active");
+  popupBox.css("transform", `translateY(${topScroll}px)`);
+
+})
+
+listForSorting.on('click', (e) => {
+  let target = $(e.target);
+  if (target.prop('tagName') == "UL") return;
+  let topScroll = $(window).scrollTop();
+  popup.addClass("popup_active");
+  popupBox.css("transform", `translateY(${topScroll}px)`);
+
+})

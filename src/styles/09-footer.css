@@ -107,7 +107,7 @@
 .footer__tel:hover,
 .footer__tel:focus,
 .footer__tel:active {
-    border-bottom: 2px solid #fff;
+    text-decoration: underline;
 }
 
 .footer__adress {
