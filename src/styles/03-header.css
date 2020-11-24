@@ -91,6 +91,7 @@
 .header__mobile-menu_open {
   transform : translate(0);
   transition: transform 0.3s ease-out;
+  box-shadow: 232px -1px 15px rgba(0, 0, 0, .25)
 }
 
 .switch {
