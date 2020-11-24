@@ -160,20 +160,18 @@ const popupBtn = $(".cooperation__btn");
 $(".cooperation__btn").on("click", (e) => {
   e.preventDefault();
   let topScroll = $(window).scrollTop();
-  popup.addClass("popup_active");
+  popup.removeClass('popup_close').addClass("popup_active");
   popupBox.css("transform", `translateY(${topScroll}px)`);
 });
 
 const closePopupBtn = $(".popup__close");
 closePopupBtn.on("click", () => {
-  popup.removeClass("popup_active");
-  let topScroll = $(window).scrollTop() + 100;
-  popupBox.css("transform", `translateY(-${topScroll}vh)`);
+  popup.removeClass("popup_active").addClass('popup_close');
 });
 
 popup.on('click', (e) => {
   if ($(e.target).hasClass('popup__box') || $(e.target).hasClass('popup')) {
-    popup.removeClass("popup_active");
+    popup.removeClass('popup_close').addClass("popup_active");
     let topScroll = $(window).scrollTop() + 100;
     popupBox.css("transform", `translateY(-${topScroll}vh)`)
   }
@@ -183,7 +181,6 @@ popup.on('click', (e) => {
 const popupForm = $(".popup__form");
 let heightChildrenInPopupForm = 0;
 popupForm.children().each(function () {
-  //if ($(this).hasClass('popupList')) break;
   heightChildrenInPopupForm += $(this).height();
 });
 const popupListHeight = $(".popup__list").height();
@@ -242,7 +239,7 @@ goodsList.on('click', (e) => {
   let target = $(e.target);
   if (target.prop('tagName') == "UL") return;
   let topScroll = $(window).scrollTop();
-  popup.addClass("popup_active");
+  popup.removeClass('popup_close').addClass("popup_active");
   popupBox.css("transform", `translateY(${topScroll}px)`);
 
 })
@@ -251,7 +248,7 @@ listForSorting.on('click', (e) => {
   let target = $(e.target);
   if (target.prop('tagName') == "UL") return;
   let topScroll = $(window).scrollTop();
-  popup.addClass("popup_active");
+  popup.removeClass('popup_close').addClass("popup_active");
   popupBox.css("transform", `translateY(${topScroll}px)`);
 
 })
