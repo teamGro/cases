@@ -134,8 +134,6 @@
 
 .popup__input:focus {
     outline: none;
-
-    border-radius: 10px;
 }
 
 .popup::placeholder {
@@ -165,6 +163,10 @@
     border       : 2px solid #DADADA;
     border-radius: 10px;
     padding      : 15px 20px;
+}
+
+.popup__text:focus {
+    outline: none;
 }
 
 .popup__btn-wrap {
