@@ -108,6 +108,9 @@
         color     : #FFFFFF;
 
         background: linear-gradient(128.26deg, #DC5474 13.94%, #503EF6 85.09%);
+        transform : translateY(1000px);
+        opacity   : 0;
+        transition: transform .6s linear, opacity .6s linear;
     }
 }
 

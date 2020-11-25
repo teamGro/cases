@@ -291,9 +291,45 @@ goodsList.on('click', (e) => {
 listForSorting.on('click', (e) => {
   let target = $(e.target);
   if (target.prop('tagName') == "UL") return;
+
+  if (!target.hasClass('goods__item')) {
+    target = target.closest('.goods__item');
+  }
+
   let topScroll = $(window).scrollTop();
   popup.removeClass('popup_close').addClass("popup_active");
   popupBox.css("transform", `translateY(${topScroll}px)`);
+
+  $('.popup__label_active').each(function () {
+    $(this).removeClass('popup__label_active');
+  })
+
+  listWithChk.children().each(function () {
+    if ($(this).attr('id') == target.attr('data-type')) {
+      $(this).remove();
+      $(this).insertBefore($('.popup__item:first-child'));
+      $(this).find('.popup__label').addClass("popup__label_active");
+    }
+  })
+});
+
+//анимация шаров
+function animateBall(ball, previousSection, koef = 1) {
+
+  let prevSection = previousSection.height() / 2;
+  let prevCoords = previousSection.offset().top - $(window).scrollTop();
+
+  if ($(window).scrollTop() > prevSection * koef + prevCoords) {
+    ball.css('transform', `translateY(0px)`);
+    ball.css('opacity', `1`);
+  }
+}
+
+$(window).on('scroll', () => {
+  animateBall($('.about__content'), $('.header'));
+  animateBall($('.plotter__info'), $('.goods'), 7);
+  animateBall($('.delivery__info'), $('.plotter'), 22);
+
 })
 
 

@@ -293,7 +293,6 @@
 
 .popup__label {
     margin-left: 10px;
-    text-align : center;
 }
 
 .popup__label::before {
@@ -328,7 +327,6 @@
 
 .popup__price {
     margin-left: auto;
-
 }
 
 @media(min-width: 1024px) {

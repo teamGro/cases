@@ -97,6 +97,9 @@
         text-align : center;
 
         background: linear-gradient(127.33deg, #DC5474 14.71%, #FFAD3D 85.29%), #DC5474;
+        transform : translateY(1000px);
+        opacity   : 0;
+        transition: transform .6s linear, opacity .6s linear;
     }
 }
 
