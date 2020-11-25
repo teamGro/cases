@@ -52,6 +52,25 @@ setTimeout(() => {
   sliderElem.mount();
 }, 500);
 
+$('.header').on('click', (e) => {
+  let target = e.target;
+  console.log(target)
+  if (target.closest('.glide__slide')) {
+    btnTopElem.animate();
+    btnMiddleElem.animate({
+      opacity: 1,
+    });
+    btnBottomElem.animate();
+
+    mobileMenu.removeClass("header__mobile-menu_open");
+    sliderElem.play();
+
+    btnBurger1.animate().removeClass("burger_opened").addClass("burger_closed");
+  }
+
+  return;
+})
+
 
 const btnNextSlide = document.querySelector(".header__btn_right");
 btnNextSlide.addEventListener("mousedown", function () {
