@@ -47,7 +47,7 @@ setTimeout(() => {
   $('.slider__item_sec').css('display', 'flex');
   sliderElem = new Glide(".glide", {
     type: "carousel",
-    autoplay: 3000,
+    //autoplay: 3000,
   });
   sliderElem.mount();
 }, 500);
@@ -69,8 +69,7 @@ $('.header').on('click', (e) => {
   }
 
   return;
-})
-
+});
 
 const btnNextSlide = document.querySelector(".header__btn_right");
 btnNextSlide.addEventListener("mousedown", function () {
@@ -247,10 +246,7 @@ chkAgree.on('click', function (e) {
 });
 
 listWithChk.on("click", function (e) {
-  if ($(this).hasClass('popup__list_inactive')) {
-
-    return;
-  }
+  if ($(this).hasClass('popup__list_inactive')) return;
 
   let target = $(e.target);
   if (target.prop("tagName") != "LI") {
@@ -269,9 +265,26 @@ listWithChk.on("click", function (e) {
 goodsList.on('click', (e) => {
   let target = $(e.target);
   if (target.prop('tagName') == "UL") return;
+
+  if (!target.hasClass('goods__item')) {
+    target = target.closest('.goods__item');
+  }
+
   let topScroll = $(window).scrollTop();
   popup.removeClass('popup_close').addClass("popup_active");
   popupBox.css("transform", `translateY(${topScroll}px)`);
+
+  $('.popup__label_active').each(function () {
+    $(this).removeClass('popup__label_active');
+  })
+
+  listWithChk.children().each(function () {
+    if ($(this).attr('id') == target.attr('data-type')) {
+      $(this).remove();
+      $(this).insertBefore($('.popup__item:first-child'));
+      $(this).find('.popup__label').addClass("popup__label_active");
+    }
+  })
 
 })
 
@@ -281,5 +294,6 @@ listForSorting.on('click', (e) => {
   let topScroll = $(window).scrollTop();
   popup.removeClass('popup_close').addClass("popup_active");
   popupBox.css("transform", `translateY(${topScroll}px)`);
-
 })
+
+
