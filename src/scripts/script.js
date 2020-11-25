@@ -47,7 +47,7 @@ setTimeout(() => {
   $('.slider__item_sec').css('display', 'flex');
   sliderElem = new Glide(".glide", {
     type: "carousel",
-    autoplay: 3000,
+    //autoplay: 3000,
   });
   sliderElem.mount();
 }, 500);
@@ -69,8 +69,7 @@ $('.header').on('click', (e) => {
   }
 
   return;
-})
-
+});
 
 const btnNextSlide = document.querySelector(".header__btn_right");
 btnNextSlide.addEventListener("mousedown", function () {

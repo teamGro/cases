@@ -17,6 +17,7 @@
   width         : 24px;
   height        : 19px;
   transition    : transform 0.3s ease-in;
+  z-index       : 16;
 }
 
 .burger_opened {
@@ -91,7 +92,7 @@
 .header__mobile-menu_open {
   transform : translate(0);
   transition: transform 0.3s ease-out;
-  box-shadow: 232px -1px 15px rgba(0, 0, 0, .25)
+  box-shadow: 232px -1px 0 rgba(0, 0, 0, .85)
 }
 
 .switch {
@@ -169,12 +170,12 @@
 }
 
 .slider__list {
-  position: relative;
-  display : flex;
+  /* position: relative; */
+  display: flex;
 }
 
 .slider__item {
-  position: relative;
+  /* position: relative; */
 
   width      : 100vw;
   height     : 100vh;
@@ -191,7 +192,7 @@
 }
 
 .slider__sub-item {
-  position: relative;
+  /* position: relative; */
 
   display       : flex;
   flex-direction: column;
@@ -303,7 +304,6 @@
 }
 
 .slider__title {
-  /* width      : 850px; */
   margin-bottom: 15px;
 
   font-weight: 500;
