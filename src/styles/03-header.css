@@ -291,6 +291,10 @@
 }
 
 /* второй экран */
+.slider__item_sec {
+  display: none;
+}
+
 .slider__content {
   display       : flex;
   flex-direction: column;

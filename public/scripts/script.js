@@ -43,11 +43,15 @@ btnBurger1.on("click", function () {
   }
 });
 
-sliderElem = new Glide(".glide", {
-  type: "carousel",
-  autoplay: 3000,
-});
-sliderElem.mount();
+setTimeout(() => {
+  $('.slider__item_sec').css('display', 'flex');
+  sliderElem = new Glide(".glide", {
+    type: "carousel",
+    autoplay: 3000,
+  });
+  sliderElem.mount();
+}, 500);
+
 
 const btnNextSlide = document.querySelector(".header__btn_right");
 btnNextSlide.addEventListener("mousedown", function () {
