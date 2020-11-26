@@ -342,7 +342,7 @@
   .slider__img-sec {
     position: absolute;
     right   : -10%;
-    bottom  : -10%;
+    bottom  : -15%;
 
     display  : block;
     transform: scale(0.8);
@@ -500,7 +500,7 @@
   }
 
   .slider__img {
-    transform: scale(1.2);
+    transform: scale(2.2);
   }
 
   .slider__title-bold {
