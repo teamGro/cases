@@ -116,7 +116,6 @@ currentActiveFilter = $(".filters__item_active");
 
 filtersBtnsContainer.on("click", (e) => {
   var target = $(e.target);
-  console.log(target);
   if (target.prop('tagName') == 'UL') {
     console.log(target.prop('tagName'));
     return;
@@ -201,10 +200,7 @@ popup.on('click', (e) => {
 
 $('.slider__link').on('click', (e) => {
   e.preventDefault();
-  console.log(1)
-  let topScroll = $(window).scrollTop();
-  popup.removeClass('popup_close').addClass("popup_active");
-  popupBox.css("transform", `translateY(${topScroll}px)`);
+  openPopup();
 })
 
 //height for list
@@ -270,9 +266,7 @@ goodsList.on('click', (e) => {
     target = target.closest('.goods__item');
   }
 
-  let topScroll = $(window).scrollTop();
-  popup.removeClass('popup_close').addClass("popup_active");
-  popupBox.css("transform", `translateY(${topScroll}px)`);
+  openPopup();
 
   $('.popup__label_active').each(function () {
     $(this).removeClass('popup__label_active');
@@ -280,12 +274,9 @@ goodsList.on('click', (e) => {
 
   listWithChk.children().each(function () {
     if ($(this).attr('id') == target.attr('data-type')) {
-      $(this).remove();
-      $(this).insertBefore($('.popup__item:first-child'));
-      $(this).find('.popup__label').addClass("popup__label_active");
+      removePopup();
     }
   })
-
 })
 
 listForSorting.on('click', (e) => {
@@ -296,9 +287,7 @@ listForSorting.on('click', (e) => {
     target = target.closest('.goods__item');
   }
 
-  let topScroll = $(window).scrollTop();
-  popup.removeClass('popup_close').addClass("popup_active");
-  popupBox.css("transform", `translateY(${topScroll}px)`);
+  openPopup();
 
   $('.popup__label_active').each(function () {
     $(this).removeClass('popup__label_active');
@@ -306,12 +295,22 @@ listForSorting.on('click', (e) => {
 
   listWithChk.children().each(function () {
     if ($(this).attr('id') == target.attr('data-type')) {
-      $(this).remove();
-      $(this).insertBefore($('.popup__item:first-child'));
-      $(this).find('.popup__label').addClass("popup__label_active");
+      removePopup();
     }
   })
 });
+
+function openPopup() {
+  let topScroll = $(window).scrollTop();
+  popup.removeClass('popup_close').addClass("popup_active");
+  popupBox.css("transform", `translateY(${topScroll}px)`);
+}
+
+function removePopup() {
+  $(this).remove();
+  $(this).insertBefore($('.popup__item:first-child'));
+  $(this).find('.popup__label').addClass("popup__label_active");
+}
 
 //анимация шаров
 function animateBall(ball, previousSection, koef = 1) {
