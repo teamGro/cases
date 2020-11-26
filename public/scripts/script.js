@@ -155,8 +155,6 @@ filtersBtnsContainer.on("click", (e) => {
   }
 });
 
-
-
 const navBar = $(".nav");
 navBar.on("click", (e) => {
   let target = $(e.target);
