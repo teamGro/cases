@@ -170,12 +170,10 @@
 }
 
 .slider__list {
-  /* position: relative; */
   display: flex;
 }
 
 .slider__item {
-  /* position: relative; */
 
   width      : 100vw;
   height     : 100vh;
@@ -192,8 +190,6 @@
 }
 
 .slider__sub-item {
-  /* position: relative; */
-
   display       : flex;
   flex-direction: column;
 }
@@ -218,7 +214,7 @@
 }
 
 .slider__link {
-  padding: 15px 30px;
+  padding: 15px 25px;
 
   font-size  : 25px;
   list-style : 27px;
@@ -282,16 +278,17 @@
   box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.05);
 }
 
-.header__track {
+/* .header__track {
   position: relative;
-}
+} */
 
+
+/* второй экран */
 .slider__item_sec {
   background-image: url("../img/header-bg-2-small.jpg");
   background-image: url("../img/header-bg-2-small.webp");
 }
 
-/* второй экран */
 .slider__item_sec {
   display: none;
 }
@@ -337,25 +334,55 @@
 }
 
 @media (min-width: 768px) {
+  .header__img-wrap {
+    display        : flex;
+    justify-content: flex-end;
+    margin-top     : 125px;
+  }
+
   .slider__img {
-    position: absolute;
-    right   : 7%;
-    display : block;
+    display: block;
   }
 
   .slider__img-sec {
     position: absolute;
     right   : -10%;
-    bottom  : calc(100vh - 115%);
+    bottom  : -10%;
 
     display  : block;
     transform: scale(0.8);
   }
 }
 
-@media (min-width: 992px) {
-  .slider__img-sec {
-    bottom: calc(100vh - 125%);
+@media only screen and (min-width: 768px) and (max-width: 1200px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .header__img-wrap {
+    background-image   : url('../img/clock.png');
+    width              : 100%;
+    height             : 220px;
+    background-position: right top;
+    background-repeat  : no-repeat;
+  }
+
+  .slider__img {
+    display: none;
+  }
+
+  .header__img-wrap_sec {
+    background-image: none;
+  }
+}
+
+@media(min-width: 1024px) {
+  .slider__item {
+    padding-top: 150px;
+  }
+
+  .slider__desc {
+    font-size: 40px;
+  }
+
+  .slider__bold {
+    font-size: 50px;
   }
 }
 
@@ -455,11 +482,16 @@
     display: none;
   }
 
+
   .header__phone-icon>img {
     vertical-align: bottom;
   }
 
-  .slider__desc {
+  .slider__sub-item {
+    flex-direction: row;
+  }
+
+  .slider__header-wrap {
     max-width: 565px;
   }
 
@@ -469,10 +501,7 @@
   }
 
   .slider__img {
-    transform: scale(0.8);
-    position : relative;
-    right    : -450px;
-    top      : calc(100vh - 1280px);
+    transform: scale(1.2);
   }
 
   .slider__title-bold {
@@ -508,7 +537,7 @@
     margin-left: 20px;
   }
 
-  .slider__desc {
+  .slider__header-wrap {
     max-width: 865px;
   }
 
@@ -516,10 +545,14 @@
     font-size: 90px;
   }
 
+  .header__img-wrap {
+    margin-top: 0;
+  }
+
   .slider__img {
-    right    : -620px;
-    top      : calc(100vh - 1425px);
-    transform: scale(1);
+    position : relative;
+    right    : -50px;
+    transform: scale(1.5);
   }
 
   .slider__img-sec {
