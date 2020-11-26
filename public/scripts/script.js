@@ -247,6 +247,7 @@ listWithChk.on("click", function (e) {
     target = target.closest(".popup__item");
   }
 
+  console.log(1)
   let chkLabel = target.find(".popup__label");
   if (!chkLabel.hasClass("popup__label_active")) {
     chkLabel.addClass("popup__label_active");
@@ -272,7 +273,7 @@ goodsList.on('click', (e) => {
 
   listWithChk.children().each(function () {
     if ($(this).attr('id') == target.attr('data-type')) {
-      removePopup();
+      removePopup($(this));
     }
   })
 })
@@ -293,7 +294,7 @@ listForSorting.on('click', (e) => {
 
   listWithChk.children().each(function () {
     if ($(this).attr('id') == target.attr('data-type')) {
-      removePopup();
+      removePopup($(this));
     }
   })
 });
@@ -304,10 +305,10 @@ function openPopup() {
   popupBox.css("transform", `translateY(${topScroll}px)`);
 }
 
-function removePopup() {
-  $(this).remove();
-  $(this).insertBefore($('.popup__item:first-child'));
-  $(this).find('.popup__label').addClass("popup__label_active");
+function removePopup(elem) {
+  elem.remove();
+  elem.insertBefore($('.popup__item:first-child'));
+  elem.find('.popup__label').addClass("popup__label_active");
 }
 
 //анимация шаров
