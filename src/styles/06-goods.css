@@ -191,9 +191,7 @@
 
 .goods__list-sort_inactive {
   position: absolute;
-  opacity: 0;
-  z-index: -1;
-  transform: translateX(-100vw);
+  display: none;
 }
 
 .goods__item-sort {
