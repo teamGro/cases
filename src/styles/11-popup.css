@@ -1,380 +1,379 @@
 .popup {
-    position: absolute;
-    top     : 0;
-    left    : 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-    height         : 0;
-    width          : 100vw;
-    margin         : 0 auto;
-    display        : flex;
-    justify-content: center;
-    display        : flex;
-    align-items    : center;
+  height: 0;
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 
-    font-size       : 15px;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index         : -1;
-    transform       : translateX(-100vw);
-    opacity         : 0;
-    transition      : transform .3s linear, opacity .3s linear;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+  transform: translateX(-100vw);
+  opacity: 0;
+  transition: transform 0.3s linear, opacity 0.3s linear;
 }
 
 .popup_active {
-    transform : translateX(0);
-    height    : 100%;
-    opacity   : 1;
-    transition: transform .3s linear;
-    z-index   : 20;
+  transform: translateX(0);
+  height: 100%;
+  opacity: 1;
+  transition: transform 0.3s linear;
+  z-index: 20;
 }
 
 .popup_close {
-    transform : translateX(100vw);
-    opacity   : 0;
-    transition: transform .3s linear;
+  transform: translateX(100vw);
+  opacity: 0;
+  transition: transform 0.3s linear;
 }
 
 .popup__box {
-    display            : flex;
-    position           : absolute;
-    top                : 0;
-    padding            : 5% 10%;
-    justify-content    : center;
-    /* padding-top     : 250px; */
-    width              : 100%;
-    height             : auto;
+  display: flex;
+  position: absolute;
+  top: 0;
+  padding: 5% 10%;
+  justify-content: center;
+  /* padding-top     : 250px; */
+  width: 100%;
+  height: auto;
 }
 
 .popup__container {
-    position        : relative;
-    width           : 100%;
-    height          : auto;
-    border-radius   : 10px;
-    padding         : 30px;
-    background-color: #fff;
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #fff;
 }
 
 .popup__close {
-    position: absolute;
-    right   : 15px;
-    top     : 15px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 
-    padding: 5px;
-    width  : 30px;
-    height : 20px;
-    display: flex;
+  padding: 5px;
+  width: 30px;
+  height: 20px;
+  display: flex;
 
-
-    font-size: 20px;
-    color    : #000000;
+  font-size: 20px;
+  color: #000000;
 }
 
 .popup__close:focus,
 .popup__close:active {
-    outline: none;
+  outline: none;
 }
 
 .popup__close-elem {
-    position: absolute;
-    width   : 65%;
-    height  : 3px;
+  position: absolute;
+  width: 65%;
+  height: 3px;
 
-    background-color: #000;
+  background-color: #000;
 }
 
 .popup__close-elem_right {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .popup__close-elem_left {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-
 .popup__title {
-    margin-bottom: 27px;
+  margin-bottom: 27px;
 
-    font-weight: bold;
-    font-size  : 16px;
-    line-height: 110%;
-    text-align : center;
-    color      : #000000;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 110%;
+  text-align: center;
+  color: #000000;
 }
 
 .popup__form {
-    display       : flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .popup__wrap {
-    display        : flex;
-    justify-content: space-between;
-    margin-bottom  : 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .popup__wrap_input {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .popup__input {
-    width        : 100%;
-    border       : 2px solid #DADADA;
-    border-radius: 10px;
-    padding      : 15px 40px 15px 20px;
+  width: 100%;
+  border: 2px solid #dadada;
+  border-radius: 10px;
+  padding: 15px 40px 15px 20px;
 
-    font-family: 'Rubik';
-    font-style : normal;
-    font-weight: normal;
-    font-size  : 15px;
-    line-height: 110%;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 110%;
 }
 
 .popup__input:first-child {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .popup__input:focus {
-    outline: none;
+  outline: none;
 }
 
 .popup::placeholder {
-    font-family: 'Rubik';
-    font-style : normal;
-    font-size  : 15px;
-    line-height: 110%;
-    color      : #B7B7B7;
-
+  font-family: 'Rubik';
+  font-style: normal;
+  font-size: 15px;
+  line-height: 110%;
+  color: #b7b7b7;
 }
 
 .popup__form .popup__input_text {
-    width        : auto;
-    margin-bottom: 15px;
+  width: auto;
+  margin-bottom: 15px;
 }
 
 .popup__wrap {
-    display        : flex;
-    justify-content: space-between;
-    margin-bottom  : 10px;
-    align-items    : center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
 .popup__text {
-    width        : 45%;
-    border       : 2px solid #DADADA;
-    border-radius: 10px;
-    padding      : 15px 20px;
+  width: 45%;
+  border: 2px solid #dadada;
+  border-radius: 10px;
+  padding: 15px 20px;
 }
 
 .popup__text:focus {
-    outline: none;
+  outline: none;
 }
 
 .popup__btn-wrap {
-    width: 50%
+  width: 50%;
 }
 
 .popup__btn {
-    width        : 100%;
-    padding      : 16px;
-    border-radius: 50px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 50px;
 
-    font-weight: bold;
-    font-size  : 15px;
-    line-height: 19px;
-    text-align : center;
-    color      : #FFFFFF;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
 
-    background: #DC5474;
-    transition: background-color .3s ease-in;
+  background: #dc5474;
+  transition: background-color 0.3s ease-in;
 }
 
 .popup__btn:hover,
 .popup__btn:focus,
 .popup__btn:active {
-    outline         : none;
-    background-color: #2C78DA;
+  outline: none;
+  background-color: #2c78da;
 }
 
 .popup__code {
-    width        : 140px;
-    height       : 50px;
-    margin-bottom: 30px;
-    border-radius: 10px;
+  width: 140px;
+  height: 50px;
+  margin-bottom: 30px;
+  border-radius: 10px;
 
-    background-color : #C4C4C4;
-    background-image : url('../img/popup-code.png');
-    background-repeat: no-repeat;
+  background-color: #c4c4c4;
+  background-image: url('../img/popup-code.png');
+  background-repeat: no-repeat;
 }
 
 .popup__wrap_agree {
-    position       : relative;
-    justify-content: flex-start;
-    align-items    : center;
-    margin-bottom  : 36px;
-    height         : 30px;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 36px;
+  height: 30px;
 }
 
 .popup__agree-label {
-    margin-left: 48px;
+  margin-left: 48px;
 
-    font-weight: 500;
-    font-size  : 15px;
-    line-height: 110%;
-    color      : #000000;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 110%;
+  color: #000000;
 }
 
 .popup__agree-label::before {
-    content : "";
-    position: absolute;
-    left    : 0;
-    top     : 0;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
 
-    display: inline-block;
-    height : 30px;
-    width  : 30px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
 
-    background-color: #3A3CE2;
-    border-radius   : 5px;
+  background-color: #3a3ce2;
+  border-radius: 5px;
 }
 
 .popup__agree-label_active::after {
-    content : "";
-    position: absolute;
-    left    : 0;
-    top     : 6px;
-    left    : 5px;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  left: 5px;
 
-    display      : inline-block;
-    height       : 10px;
-    width        : 20px;
-    border-left  : 2px solid #fff;
-    border-bottom: 2px solid #fff;
+  display: inline-block;
+  height: 10px;
+  width: 20px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .popup__list {
-    display       : flex;
-    flex-direction: column;
-    width         : 100%;
-    overflow-y    : auto;
-    filter        : none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+  filter: none;
 }
 
 .popup__list::-webkit-scrollbar {
-    width           : 4px;
-    background-color: #E0E0E0;
-    height          : auto;
+  width: 4px;
+  background-color: #e0e0e0;
+  height: auto;
 }
 
 .popup__list::-webkit-scrollbar-thumb {
-    background   : #DC5474;
-    border-radius: 5px;
+  background: #dc5474;
+  border-radius: 5px;
 }
 
 .popup__list_inactive {
-    filter: blur(2px);
+  filter: blur(2px);
 }
 
 .popup__item {
-    position: relative;
+  position: relative;
 
-    width        : 100%;
-    padding      : 9px 11px 9px 65px;
-    border-radius: 10px;
-    display      : flex;
-    align-items  : center;
+  width: 100%;
+  padding: 9px 11px 9px 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
 
-    background: #EFEFEF;
+  background: #efefef;
 }
 
 .popup__item:nth-child(2n) {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .popup__label {
-    margin-left: 10px;
+  margin-left: 10px;
+  width: 60%;
 }
 
 .popup__label::before {
-    content : "";
-    position: absolute;
-    left    : 20px;
+  content: '';
+  position: absolute;
+  left: 10px;
 
-    display      : inline-block;
-    border       : 2px solid #B1B1B1;
-    box-sizing   : border-box;
-    border-radius: 5px;
-    width        : 25px;
-    height       : 25px;
-    top          : 50%;
-    transform    : translateY(-50%);
+  display: inline-block;
+  border: 2px solid #b1b1b1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .popup__label_active::after {
-    content : "";
-    position: absolute;
-    left    : 30px;
-    top     : 50%;
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 50%;
 
-    display      : inline-block;
-    height       : 8px;
-    width        : 14px;
-    border-left  : 2px solid #B1B1B1;
-    border-bottom: 2px solid #B1B1B1;
+  display: inline-block;
+  height: 8px;
+  width: 14px;
+  border-left: 2px solid #b1b1b1;
+  border-bottom: 2px solid #b1b1b1;
 
-    transform: rotate(-45deg) translateY(-90%);
+  transform: rotate(-45deg) translateY(-90%);
 }
 
 .popup__price {
-    margin-left: auto;
+  margin-left: auto;
+  width: 20%;
 }
 
-@media(min-width: 1024px) {
-    .popup {
-        font-size          : 18px;
-        background-repeat  : no-repeat;
-        background-position: center top;
-    }
+@media (min-width: 1024px) {
+  .popup {
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
 
-    .popup__box {
-        display         : flex;
-        justify-content : center;
-        padding-top     : 250px;
-        width           : 1000px;
-        height          : 1500px;
-        position        : absolute;
-        top             : 0;
-        background-image: url('../img/popup-bg.png');
-    }
+  .popup__box {
+    display: flex;
+    justify-content: center;
+    padding-top: 250px;
+    width: 1000px;
+    height: 1500px;
+    position: absolute;
+    top: 0;
+    background-image: url('../img/popup-bg.png');
+  }
 
-    .popup__container {
-        width  : 700px;
-        height : 954px;
-        padding: 50px 100px;
-    }
+  .popup__container {
+    width: 700px;
+    height: 954px;
+    padding: 50px 100px;
+  }
 
-    .popup__title {
-        font-size: 21px;
-    }
+  .popup__title {
+    font-size: 21px;
+  }
 
-    .popup__wrap_input {
-        flex-direction: row;
-    }
+  .popup__wrap_input {
+    flex-direction: row;
+  }
 
-    .popup__input:first-child {
-        margin-bottom: 0;
-    }
+  .popup__input:first-child {
+    margin-bottom: 0;
+  }
 
-    .popup__input {
-        width    : 49%;
-        font-size: 18px;
-    }
+  .popup__input {
+    width: 49%;
+    font-size: 18px;
+  }
 
-    .popup__label {
-        font-size: 15px;
-    }
+  .popup__label {
+    font-size: 15px;
+  }
 
-    .popup__price {
-        min-width: 90px;
-    }
+  .popup__price {
+    min-width: 90px;
+  }
 }
