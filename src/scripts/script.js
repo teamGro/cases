@@ -54,7 +54,6 @@ setTimeout(() => {
 
 $('.header').on('click', (e) => {
   let target = e.target;
-  console.log(target)
   if (target.closest('.glide__slide')) {
     btnTopElem.animate();
     btnMiddleElem.animate({
@@ -117,7 +116,6 @@ currentActiveFilter = $(".filters__item_active");
 filtersBtnsContainer.on("click", (e) => {
   var target = $(e.target);
   if (target.prop('tagName') == 'UL') {
-    console.log(target.prop('tagName'));
     return;
   }
 
@@ -247,7 +245,6 @@ listWithChk.on("click", function (e) {
     target = target.closest(".popup__item");
   }
 
-  console.log(1)
   let chkLabel = target.find(".popup__label");
   if (!chkLabel.hasClass("popup__label_active")) {
     chkLabel.addClass("popup__label_active");
