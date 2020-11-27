@@ -13,6 +13,7 @@
     <script src="./scripts/glide.min.js"></script>
     <script defer src="./scripts/jquery.min.js"></script>
     <script src="./scripts/mixitup.min.js"></script>
+    <script src="./scripts/mixitup-pagination.min.js"></script>
     <script src="./scripts/script-min.js" defer></script>
     <title>Document</title>
   </head>
@@ -215,7 +216,7 @@
         <div class="container goods__container">
           <div class="goods__wrap glide_2">
             <div class="glide__track goods__box" data-glide-el="track">
-              <ul class="goods__list goods__list_slides glide-slides">
+              <ul class="goods__list goods__list_slides glide-slides" style="display: none">
                 <li class="glide__slide">
                   <ul class="goods__sub-list">
                     <li class="goods__item goods__item_slides" data-type="joistick">
@@ -419,13 +420,13 @@
               </ul>
             </div>
 
-            <div class="goods__next glide__arrows" data-glide-el="controls">
+            <!-- <div class="goods__next glide__arrows" data-glide-el="controls">
               <button type="button" class="glide__arrow glide__arrow--right" data-glide-dir=">">
                 <img src="./img/goods-arrow.svg" alt="дальше" />
               </button>
-            </div>
-
-            <ul class="goods__list goods__list-sort goods__list-sort_inactive">
+            </div> -->
+            <!-- goods__list-sort_inactive -->
+            <ul class="goods__list goods__list-sort">
               <li class="goods__item goods__item-sort mix category-a" data-order="1" data-sort="goods-other" data-type="joistick">
                 <div class="goods__img-wrap">
                   <picture>

@@ -100,13 +100,18 @@ btnPrevSlide.addEventListener('touchend', function () {
   this.classList.remove('header__btn_active');
 });
 
-let goodsSlider = new Glide('.glide_2', {
-  type: 'carousel',
-  perView: 1,
-}).mount();
+// let goodsSlider = new Glide('.glide_2', {
+//   type: 'carousel',
+//   perView: 1,
+// }).mount();
 let isSliderExist = true;
 
-let mixer = mixitup('.goods__list-sort');
+let mixer = mixitup('.goods__list-sort', {
+  pagination: {
+    limit: 8, // impose a limit of 8 targets per page
+    loop: true,
+  },
+});
 const goodsList = $('.goods__list_slides');
 const btnGoddsNext = $('.goods__next');
 const listForSorting = $('.goods__list-sort');
@@ -127,30 +132,30 @@ filtersBtnsContainer.on('click', (e) => {
   target.addClass('filters__item_active');
   currentActiveFilter = target;
 
-  let targetIDValue = target.prop('id');
+  // let targetIDValue = target.prop('id');
 
-  if (isSliderExist && targetIDValue == 'goods-all') return;
+  // if (isSliderExist && targetIDValue == 'goods-all') return;
 
-  if (targetIDValue == 'goods-all' && isSliderExist == false) {
-    goodsSlider = new Glide('.glide_2', {
-      type: 'carousel',
-    }).mount();
-    goodsList.removeClass('goods__list_inactive');
-    listForSorting.addClass('goods__list-sort_inactive');
-    isSliderExist = true;
-    btnGoddsNext.css('display', 'block');
-    return;
-  }
+  // if (targetIDValue == 'goods-all' && isSliderExist == false) {
+  //   goodsSlider = new Glide('.glide_2', {
+  //     type: 'carousel',
+  //   }).mount();
+  //   goodsList.removeClass('goods__list_inactive');
+  //   listForSorting.addClass('goods__list-sort_inactive');
+  //   isSliderExist = true;
+  //   btnGoddsNext.css('display', 'block');
+  //   return;
+  // }
 
-  if (isSliderExist) {
-    goodsSlider.destroy();
-    goodsSlider = null;
-    isSliderExist = false;
-    btnGoddsNext.css('display', 'none');
+  // if (isSliderExist) {
+  //   goodsSlider.destroy();
+  //   goodsSlider = null;
+  //   isSliderExist = false;
+  //   btnGoddsNext.css('display', 'none');
 
-    goodsList.addClass('goods__list_inactive');
-    listForSorting.removeClass('goods__list-sort_inactive');
-  }
+  //   goodsList.addClass('goods__list_inactive');
+  //   listForSorting.removeClass('goods__list-sort_inactive');
+  // }
 });
 
 const navBar = $('.nav');
