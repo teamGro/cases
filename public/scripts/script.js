@@ -112,6 +112,24 @@ let mixer = mixitup('.goods__list-sort', {
     loop: true,
   },
 });
+
+let mixitUpControl;
+setTimeout(() => {
+  mixitUpControl = $('.mixitup-control-next');
+  mixitUpControl.addClass('goods__next');
+}, 100);
+$(window).on('click', (e) => {
+  setTimeout(() => {
+    mixitUpControl.text('');
+    mixitUpControl = $('.mixitup-control-next');
+    mixitUpControl.addClass('goods__next');
+  }, 100);
+});
+
+$(window).on('touchend', () => {
+  mixitUpControl.trigger('click');
+});
+
 const goodsList = $('.goods__list_slides');
 const btnGoddsNext = $('.goods__next');
 const listForSorting = $('.goods__list-sort');

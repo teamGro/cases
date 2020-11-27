@@ -100,23 +100,34 @@ btnPrevSlide.addEventListener('touchend', function () {
   this.classList.remove('header__btn_active');
 });
 
-// let goodsSlider = new Glide('.glide_2', {
-//   type: 'carousel',
-//   perView: 1,
-// }).mount();
-let isSliderExist = true;
 
+const btnGoddsNext = $('.goods__next');
+const listForSorting = $('.goods__list-sort');
+const filtersBtnsContainer = $('.filters');
+let currentActiveFilter = $('.filters__item_active');
 let mixer = mixitup('.goods__list-sort', {
   pagination: {
     limit: 8, // impose a limit of 8 targets per page
     loop: true,
   },
 });
-const goodsList = $('.goods__list_slides');
-const btnGoddsNext = $('.goods__next');
-const listForSorting = $('.goods__list-sort');
-const filtersBtnsContainer = $('.filters');
-currentActiveFilter = $('.filters__item_active');
+
+let mixitUpControl;
+setTimeout(() => {
+  mixitUpControl = $('.mixitup-control-next');
+  mixitUpControl.addClass('goods__next');
+}, 100);
+$(window).on('click', (e) => {
+  setTimeout(() => {
+    mixitUpControl.text('');
+    mixitUpControl = $('.mixitup-control-next');
+    mixitUpControl.addClass('goods__next');
+  }, 100);
+});
+
+$(listForSorting).on('touchend', () => {
+  mixitUpControl.trigger('click');
+});
 
 filtersBtnsContainer.on('click', (e) => {
   var target = $(e.target);
