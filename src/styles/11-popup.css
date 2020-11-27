@@ -142,6 +142,10 @@
   color: #b7b7b7;
 }
 
+.input__error {
+  border-color: #dc5474;
+}
+
 .popup__form .popup__input_text {
   width: auto;
   margin-bottom: 15px;
