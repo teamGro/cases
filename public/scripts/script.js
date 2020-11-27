@@ -176,9 +176,8 @@ const popupBox = $('.popup__box');
 const popupBtn = $('.cooperation__btn');
 $('.cooperation__btn').on('click', (e) => {
   e.preventDefault();
-  let topScroll = $(window).scrollTop();
-  popup.removeClass('popup_close').addClass('popup_active');
-  popupBox.css('transform', `translateY(${topScroll}px)`);
+  openPopup();
+  checkPhone();
 });
 
 const closePopupBtn = $('.popup__close');
@@ -197,6 +196,7 @@ popup.on('click', (e) => {
 $('.slider__link').on('click', (e) => {
   e.preventDefault();
   openPopup();
+  checkPhone();
 });
 
 //height for list
@@ -260,6 +260,7 @@ goodsList.on('click', (e) => {
   }
 
   openPopup();
+  checkPhone();
 
   $('.popup__label_active').each(function () {
     $(this).removeClass('popup__label_active');
