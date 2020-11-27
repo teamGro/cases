@@ -327,7 +327,7 @@ $(window).on('scroll', () => {
 //валидация номера телефона
 function checkPhone() {
   console.log(1);
-  let reg = /^((\+?7|8)[ \-] ?)?((\(\d{3}\))|(\d{3}))?([ \-])?(\d{3}[\- ]?\d{2}[\- ]?\d{2})$/;
+  let reg = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
   let phoneField = $('#user-tel');
   phoneField.on('blur', function () {
     console.log(2);
